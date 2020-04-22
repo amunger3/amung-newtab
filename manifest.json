@@ -1,0 +1,20 @@
+{
+
+  "description": "Custom page loaded on new tab.",
+  "manifest_version": 2,
+  "name": "amung-newtab",
+  "version": "0.0.1",
+  "homepage_url": "https://github.com/amunger3/amung-newtab",
+  "icons": {
+    "48": "img/hex-icon.png"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "browser_action": {
+    "default_icon": "img/hex-icon.png"
+  }
+
+}
