@@ -3,18 +3,29 @@
   "description": "Custom page loaded on new tab.",
   "manifest_version": 2,
   "name": "amung-newtab",
-  "version": "0.0.1",
+  "author": "Alex Munger",
+  "version": "0.0.2",
   "homepage_url": "https://github.com/amunger3/amung-newtab",
   "icons": {
-    "48": "img/hex-icon.png"
+    "48": "img/icon.svg"
   },
 
   "background": {
     "scripts": ["background.js"]
   },
 
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "amung@leftparties.org"
+    }
+  },
+
+  "chrome_url_overrides" : {
+    "newtab": "amung.html"
+  },
+
   "browser_action": {
-    "default_icon": "img/hex-icon.png"
+    "default_icon": "img/icon.svg"
   }
 
 }
