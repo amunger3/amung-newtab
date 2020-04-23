@@ -4,7 +4,7 @@
   "manifest_version": 2,
   "name": "amung-newtab",
   "author": "Alex Munger",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage_url": "https://github.com/amunger3/amung-newtab",
   "icons": {
     "48": "static/img/icon.svg"

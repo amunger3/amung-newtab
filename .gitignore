@@ -1,2 +1,6 @@
+# VSCode Folders
 .history/
+.vscode/
+
+# Build Folders
 web-ext-artifacts/
