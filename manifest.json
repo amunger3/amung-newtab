@@ -7,7 +7,7 @@
   "version": "0.0.2",
   "homepage_url": "https://github.com/amunger3/amung-newtab",
   "icons": {
-    "48": "img/icon.svg"
+    "48": "static/img/icon.svg"
   },
 
   "background": {
@@ -25,7 +25,7 @@
   },
 
   "browser_action": {
-    "default_icon": "img/icon.svg"
+    "default_icon": "/static/img/icon.svg"
   }
 
 }
