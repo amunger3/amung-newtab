@@ -1,1 +1,1 @@
-web-ext run --firefox="C:\Users\toman\AppData\Local\Firefox Developer Edition\firefox.exe"
+web-ext run --firefox="C:\Program Files\Firefox Developer Edition\firefox.exe"
