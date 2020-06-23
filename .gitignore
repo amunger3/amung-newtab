@@ -1,11 +1,9 @@
-# NPM folders #
+# NPM #
 node_modules/
 
-# VSCode Folders #
-.history/
-.vscode/
-
-# Build Folders #
+# Web-Ext build files #
 dist/
-docs/
 web-ext-artifacts/
+
+# JSDoc build files #
+docs/

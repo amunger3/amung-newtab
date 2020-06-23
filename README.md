@@ -24,3 +24,8 @@
 - [WebExt](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)
 - [WebExtension-Examples](https://github.com/mdn/webextensions-examples) Mozilla repo with example extensions
 - [NewTabOverride](https://github.com/cadeyrn/newtaboverride) (Similar extension)
+
+## Releases
+
+- [Firefox Add-Ons Profile](https://addons.mozilla.org/en-US/firefox/user/15516825/)
+- [Add-On Page](https://addons.mozilla.org/en-US/developers/addon/be49d58ab9ec415cad53)

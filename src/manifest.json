@@ -1,7 +1,7 @@
 {
-    "description": "Custom page loaded on new tab.",
     "manifest_version": 2,
     "name": "amung-newtab",
+    "description": "Custom page loaded when opening a NewTab.",
     "author": "Alex Munger",
     "version": "0.0.3",
     "homepage_url": "https://github.com/amunger3/amung-newtab",
@@ -10,18 +10,33 @@
         "64": "img/uicon.svg",
         "96": "img/uicon.svg"
     },
+    "developer": {
+        "name": "Alex Munger",
+        "url": "https://github.com/amunger3"
+    },
     "background": {
-        "scripts": ["js/background.js"]
+        "scripts": [
+            "js/background.js"
+        ]
     },
-    "browser_specific_settings": {
-        "gecko": {
-            "id": "amung@gatech.edu"
-        }
-    },
+    "chrome-settings-overrides": {},
     "chrome_url_overrides": {
         "newtab": "amung.html"
     },
     "browser_action": {
-        "default_icon": "img/uicon.svg"
+        "browser_style": false,
+        "default_area": "navbar",
+        "default_icon": {
+            "48": "img/uicon.svg",
+            "64": "img/uicon.svg",
+            "96": "img/uicon.svg"
+        },
+        "default_popup": "amung.html",
+        "default_title": "Settings: AMung — NewTab"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "munger.alex@gmail.com"
+        }
     }
 }
