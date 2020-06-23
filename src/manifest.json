@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "amung-newtab",
-    "description": "Custom page loaded when opening a NewTab.",
+    "name": "__MSG_extension_name__",
+    "description": "__MSG_extension_description__",
     "author": "Alex Munger",
     "version": "0.0.3",
     "homepage_url": "https://github.com/amunger3/amung-newtab",
@@ -32,11 +32,32 @@
             "96": "img/uicon.svg"
         },
         "default_popup": "amung.html",
-        "default_title": "Settings: AMung — NewTab"
+        "default_title": "__MSG_settings_title__"
+    },
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Shift+F12"
+            }
+        }
+    },
+    "omnibox": {
+        "keyword": "newtab-amung"
     },
     "browser_specific_settings": {
         "gecko": {
             "id": "munger.alex@gmail.com"
         }
-    }
+    },
+    "options_ui": {
+        "page": "amung.html",
+        "open-in-tab": true
+    },
+    "permissions": [
+        "history",
+        "menus",
+        "storage",
+        "tabs"
+    ],
+    "default_locale": "en"
 }
