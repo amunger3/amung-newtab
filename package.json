@@ -47,7 +47,7 @@
         "lint:css": "gulp lint-css",
         "lint:html": "gulp lint-html",
         "lint:webext": "cd src && web-ext lint",
-        "mix": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "mix": "node_modules/.bin/webpack --config=node_modules/laravel-mix/setup/webpack.config.js",
         "run:dev": "cd src && web-ext run --firefox=\"C:/Program Files/Firefox Developer Edition/firefox.exe\""
     },
     "webExt": {
