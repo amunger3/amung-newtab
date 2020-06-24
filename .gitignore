@@ -7,3 +7,7 @@ web-ext-artifacts/
 
 # JSDoc build files #
 docs/
+
+# Pre-built SCSS and JS #
+src/sass/uikit/
+src/js/uikit/
