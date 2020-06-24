@@ -1,6 +1,6 @@
 {
     "name": "amung-newtab",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Firefox Web-Ext to load a custom page on NewTab.",
     "author": {
         "name": "Alex Munger",
