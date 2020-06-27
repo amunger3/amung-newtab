@@ -6,6 +6,18 @@ Changelog labels are any of the following:
 
 - [BUGFIX], [CHANGE], [CODEQUALITY], [DEPENDENCY], [ENHANCEMENT], [OTHER], [TRANSLATION]
 
+### Version 0.0.6 (2020-06-23)
+
+- [ENHANCEMENT] Added content to NewTab page, using UIKit.
+- [ENHANCEMENT] Added Options page (non-functional).
+- [BUGFIX] Fixed OptionsUI link and popup link.
+- [DEPENDENCY] Resolve URL Loader upgraded to 3.1.1.
+- [TRANSLATION] Added all Spanish translations and partial Russian translations.
+
+### Version 0.0.5 (2020-06-23)
+
+- [OTHER] Reupload (corrupt archive)
+
 ### Version 0.0.4 (2020-06-23)
 
 - [DEPENDENCY] Now using NPM to for package management
