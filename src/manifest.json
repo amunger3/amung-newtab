@@ -31,7 +31,7 @@
             "64": "img/uicon.svg",
             "96": "img/uicon.svg"
         },
-        "default_popup": "amung.html",
+        "default_popup": "options.html",
         "default_title": "__MSG_settings_title__"
     },
     "commands": {
@@ -50,7 +50,7 @@
         }
     },
     "options_ui": {
-        "page": "amung.html",
+        "page": "options.html",
         "open-in-tab": true
     },
     "permissions": [
