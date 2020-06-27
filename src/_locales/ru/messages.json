@@ -1,38 +1,26 @@
 {
-    "clear_addressbar_description": {
-        "message": "The automatic emptying of the address bar or selecting the URL is currently not possible for WebExtensions. This requires a change by Mozilla."
-    },
     "clear_addressbar_title": {
         "message": "Clear address bar / select URL"
     },
     "extension_description": {
-        "message": "AMung — NewTab overrides the default Firefox NewTab options to load a custom page."
+        "message": "АМунг — НоваяВкладка overrides the default Firefox НоваяВкладка options to load a custom page."
     },
     "extension_name": {
-        "message": "AMung — NewTab"
-    },
-    "focus_website_description": {
-        "message": "Set focus to the web page instead of the address bar"
-    },
-    "focus_website_title": {
-        "message": "Focus"
+        "message": "АМунг — НоваяВкладка"
     },
     "github_link": {
-        "message": "AMung — NewTab on GitHub"
+        "message": "АМунг — НоваяВкладка на GitHub"
     },
     "homepage_description": {
-        "message": "Firefox will use the included HTML file as the NewTab page. Feel free to edit the HTML or the styles."
-    },
-    "introduction": {
-        "message": "This page is provided by {0}: Select which page should open as new tab!"
-    },
-    "learn_more": {
-        "message": "Learn more"
+        "message": "Firefox will use the included HTML file as the НоваяВкладка page. Feel free to edit the HTML or the styles."
     },
     "new_tab_title": {
-        "message": "AMung — NewTab"
+        "message": "АМунг — НоваяВкладка"
     },
     "omnibox_command_settings": {
-        "message": "Open the AMung — NewTab settings"
+        "message": "Open the АМунг — НоваяВкладка settings"
+    },
+    "settings_title": {
+        "message": "Настройки: АМунг — НоваяВкладка"
     }
 }
