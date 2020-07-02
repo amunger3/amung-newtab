@@ -3,7 +3,7 @@
     "name": "__MSG_extension_name__",
     "description": "__MSG_extension_description__",
     "author": "Alex Munger",
-    "version": "0.0.6",
+    "version": "0.1.0",
     "homepage_url": "https://github.com/amunger3/amung-newtab",
     "icons": {
         "48": "img/uicon.svg",

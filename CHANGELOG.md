@@ -6,6 +6,11 @@ Changelog labels are any of the following:
 
 - [BUGFIX], [CHANGE], [CODEQUALITY], [DEPENDENCY], [ENHANCEMENT], [OTHER], [TRANSLATION]
 
+### Version 0.1.0 (2020-07-02)
+
+- [ENHANCEMENT] Custom UIKiu theme initialized.
+- [ENHANCEMENT] Added content to NewTab page, using UIKit.
+
 ### Version 0.0.6 (2020-06-23)
 
 - [ENHANCEMENT] Added content to NewTab page, using UIKit.
