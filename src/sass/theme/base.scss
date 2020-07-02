@@ -1,0 +1,11 @@
+
+$base-link-color:                                #6554c0 !default;
+$base-link-hover-color:                          #403294 !default;
+$base-link-hover-text-decoration:                  underline !default;
+
+a:focus,
+.uk-link:focus {
+    color: $base-link-hover-color;
+    text-decoration: $base-link-hover-text-decoration;
+    border: 3px solid $base-link-color;
+}

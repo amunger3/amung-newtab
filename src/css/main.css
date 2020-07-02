@@ -50,12 +50,12 @@
     }
 }
 
-body {
+/* body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     color: var(--gray-text);
     background-color: #fff;
-}
+} */
 
 /* header {
     padding: 0 20px;
@@ -95,15 +95,15 @@ h1 {
     background-position: 0 6px;
 }
 
-h2 {
+/* h2 {
     font-size: 20px;
 }
 
 h2:first-child {
     margin-top: 0;
-}
+} */
 
-a {
+/* a {
     color: var(--color-purple-light);
     text-decoration: none;
     transition: color ease 250ms;
@@ -111,7 +111,7 @@ a {
 
 a:not(.button):hover {
     color: var(--color-purple-dark);
-}
+} */
 
 /* .grey-bg {
     box-sizing: border-box;
