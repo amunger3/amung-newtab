@@ -20,7 +20,7 @@
     "devDependencies": {
         "create-web-ext": "1.0.0",
         "gulp": "^4.0.2",
-        "gulp-htmllint": "0.0.16",
+        "gulp-htmllint": "0.0.17",
         "gulp-jsdoc3": "^3.0.0",
         "gulp-stylelint": "^13.0.0",
         "htmllint": "^0.8.0",
@@ -28,15 +28,15 @@
         "jsdoc": "^3.6.4",
         "jsdoc-strip-async-await": "^0.1.0",
         "laravel-mix": "^5.0.4",
-        "marked": "^1.1.0",
+        "marked": "^1.1.1",
         "npm-run-all": "^4.1.5",
         "resolve-url-loader": "^3.1.1",
-        "sass": "^1.26.9",
-        "sass-loader": "^8.0.2",
+        "sass": "^1.26.10",
+        "sass-loader": "^9.0.2",
         "stylelint": "^13.6.1",
         "stylelint-csstree-validator": "^1.8.0",
         "stylelint-order": "^4.1.0",
-        "uikit": "^3.5.4",
+        "uikit": "^3.5.5",
         "vue-template-compiler": "^2.6.11",
         "web-ext": "^4.3.0"
     },
@@ -57,5 +57,9 @@
             "firefox": "C:/Program Files/Firefox Developer Edition/firefox.exe"
         },
         "sourceDir": "src"
+    },
+    "dependencies": {
+        "jquery": "^3.5.1",
+        "uniq": "^1.0.1"
     }
 }

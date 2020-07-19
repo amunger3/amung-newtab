@@ -8,16 +8,19 @@
 
 ## Build dependencies
 
+- `gulp`: Gulp build tools
+- `laravel-mix`: Not a Laravel app, but still best asset mixing package.
 - `npm`: Node Package Manager
 - `npm-run-all`: Run multiple NPM scripts with one command
+- `sass`: Sass compiler
+- `uikit`: CSS library
 - `web-ext`: Firefox webextension cli
-- `create-web-ext`: Firefox webextension scaffolding cli
 
 ## File Structure
 
-- Prebuilt source files: `/src/`
-- Build directory: `/dist/`
-- Docs: `/docs/`
+- Prebuilt source files: `src/`
+- Build directory: `dist/`
+- Docs: `docs/`
 
 ## References
 
