@@ -25,8 +25,35 @@
                 <div class="uk-card uk-card-default uk-box-shadow-medium">
                     <ul class="uk-nav uk-nav-default uk-nav-primary uk-nav-parent-icon uk-padding-small" uk-nav="multiple: true">
                         <li class="uk-active"><a href="./amung.html">NewTab</a></li>
+
                         <li class="uk-parent">
-                            <a href="#">LocalHost Ports</a>
+                            <a href="#"> &NonBreakingSpace; <span uk-icon="icon: happy"></span> &NonBreakingSpace; <span>Football Links</span></a>
+                            <ul class="uk-nav-sub">
+                                <li><a href="https://encycolorpedia.com/teams/football">Encycolorpedia: Football Teams</a></li>
+                                <li><a href="https://www.espn.com/watch/collections/19502/latest-series">ESPN FC</a></li>
+                                <li><a href="https://www.football-data.org/documentation/quickstart">Football-Data API Docs</a></li>
+                                <li><a href="https://fs-mir-pro.herokuapp.com/">FS-App Elo Ratings</a></li>
+                                <li><a href="https://www.fullmatchesandshows.com/">FullMatchesAndShows</a></li>
+                                <li><a href="https://www.sofascore.com/">SofaScore</a></li>
+                                <li><a href="https://sofifa.com/?layout=old">SoFIFA</a></li>
+                                <li><a href="https://www.transfermarkt.us/">TransferMarkt</a></li>
+                                <li><a href="https://www.whoscored.com/">WhoScored</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="uk-parent">
+                            <a href="#"> &NonBreakingSpace; <span uk-icon="icon: github"></span> &NonBreakingSpace; <span>GitHub</span></a>
+                            <ul class="uk-nav-sub">
+                                <li><a href="https://github.com/amunger3">Profile</a></li>
+                                <li><a href="https://amunger3.github.io">GitHub Pages</a></li>
+                                <li><a href="https://github.com/amunger3?tab=repositories">Repositories</a></li>
+                                <li><a href="https://github.com/amunger3?tab=stars">Stars</a></li>
+                                <li><a href="https://gist.github.com/mine">Gists</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="uk-parent">
+                            <a href="#"> &NonBreakingSpace; <span uk-icon="icon: laptop"></span> &NonBreakingSpace; <span>LocalHost Ports</span></a>
                             <ul class="uk-nav-sub">
                                 <li><a class="uk-link" href="http://localhost:80">80 (Ubuntu::Apache2)</a></li>
                                 <li><a class="uk-link" href="http://localhost:4000">4000 (PHP::Laravel)</a></li>
@@ -36,23 +63,15 @@
                                 <li><a class="uk-link" href="http://localhost:8181">8181 (Ruby::serve)</a></li>
                             </ul>
                         </li>
+
                         <li class="uk-parent">
-                            <a href="#">Ubuntu Server</a>
+                            <a href="#"> &NonBreakingSpace; <span uk-icon="icon: server"></span> &NonBreakingSpace; <span>Ubuntu Server</span></a>
                             <ul class="uk-nav-sub">
                                 <li><a href="http://70.32.24.16">Index</a></li>
                                 <li><a href="https://solusvm2.a2hosting.com:5656/home.php">Admin</a></li>
                             </ul>
                         </li>
-                        <li class="uk-parent">
-                            <a href="#">GitHub</a>
-                            <ul class="uk-nav-sub">
-                                <li><a href="https://github.com/amunger3">Profile</a></li>
-                                <li><a href="https://amunger3.github.io">GitHub Pages</a></li>
-                                <li><a href="https://github.com/amunger3?tab=repositories">Repositories</a></li>
-                                <li><a href="https://github.com/amunger3?tab=stars">Stars</a></li>
-                                <li><a href="https://gist.github.com/mine">Gists</a></li>
-                            </ul>
-                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -66,11 +85,10 @@
                         <div class="uk-width-1-2@m">
                             <h5>Language</h5>
                             <ul class="uk-subnav uk-subnav-pill" uk-margin>
-                                <li uk-filter-control="filter: [data-lang='bash']; group: data-lang"><a href="#">Bash</a></li>
+                                <li uk-filter-control="filter: [data-lang='cli']; group: data-lang"><a href="#">CLI</a></li>
                                 <li uk-filter-control="filter: [data-lang='css']; group: data-lang"><a href="#">CSS</a></li>
                                 <li uk-filter-control="filter: [data-lang='node']; group: data-lang"><a href="#">NodeJS</a></li>
                                 <li uk-filter-control="filter: [data-lang='php']; group: data-lang"><a href="#">PHP</a></li>
-                                <li uk-filter-control="filter: [data-lang='pwsh']; group: data-lang"><a href="#">PowerShell</a></li>
                                 <li uk-filter-control="filter: [data-lang='py']; group: data-lang"><a href="#">Python</a></li>
                             </ul>
                         </div>
@@ -111,7 +129,7 @@
                                 <h4 class="uk-link-heading">Flask</h4>
                             </a>
                         </li>
-                        <li data-lang="pwsh" data-topic="pkg">
+                        <li data-lang="cli" data-topic="pkg">
                             <a href="https://powershellgallery.com" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
                                 <h4 class="uk-link-heading">PS Gallery</h4>
                             </a>
@@ -131,29 +149,39 @@
                                 <h4 class="uk-link-heading">PyPi</h4>
                             </a>
                         </li>
-                        <li data-lang="pwsh" data-topic="sys">
+                        <li data-lang="cli" data-topic="sys">
                             <a href="https://docs.microsoft.com/en-us/powershell/scripting/community/2020-q2?view=powershell-7" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
                                 <h4 class="uk-link-heading">PS Docs</h4>
                             </a>
                         </li>
                         <li data-lang="php" data-topic="pkg">
                             <a href="https://packagist.org/" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
-                                <h4 class="uk-link-heading">Composer: Packagist</h4>
+                                <h4 class="uk-link-heading">Composer</h4>
                             </a>
                         </li>
-                        <li data-lang="bash" data-topic="sys">
+                        <li data-lang="cli" data-topic="sys">
                             <a href="https://www.mankier.com/" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
                                 <h4 class="uk-link-heading">Bash man pages</h4>
                             </a>
                         </li>
-                        <li data-lang="bash" data-topic="sys">
+                        <li data-lang="cli" data-topic="sys">
                             <a href="http://cht.sh" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
                                 <h4 class="uk-link-heading">Cht.Sh</h4>
                             </a>
                         </li>
-                        <li data-lang="bash" data-topic="webdev">
+                        <li data-lang="cli" data-topic="webdev">
                             <a href="http://wttr.in" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
                                 <h4 class="uk-link-heading">Wttr.In</h4>
+                            </a>
+                        </li>
+                        <li data-lang="py" data-topic="webdev">
+                            <a href="https://dash.plotly.com/" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
+                                <h4 class="uk-link-heading">Plotly – Dash</h4>
+                            </a>
+                        </li>
+                        <li data-lang="cli" data-topic="webdev">
+                            <a href="https://extensionworkshop.com/documentation/develop/" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
+                                <h4 class="uk-link-heading">WebExt</h4>
                             </a>
                         </li>
                     </ul>
@@ -164,9 +192,20 @@
 
         </div>
 
+        <div class="uk-section uk-section-default uk-section-small">
+            <div class="uk-container">
+
+                <div class="uk-grid-large uk-flex-middle" uk-grid>
+                    <div class="uk-width-expand">
+                        <p class="uk-text-center uk-text-middle">Alex Munger — 2020</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
-    <script src="js/main.js"></script>
     <script src="js/app.js"></script>
     <script defer src="js/vendor/jquery.js"></script>
 

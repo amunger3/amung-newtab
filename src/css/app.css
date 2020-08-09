@@ -304,7 +304,7 @@ h6,
   margin: 0 0 20px 0;
   font-family: Nunito, sans-serif;
   font-weight: normal;
-  color: #333;
+  color: #231f20;
   text-transform: none;
 }
 
@@ -1002,7 +1002,7 @@ a.uk-link-reset,
 }
 
 .uk-list-emphasis > ::before {
-  color: #333 !important;
+  color: #231f20 !important;
 }
 
 .uk-list-primary > ::before {
@@ -1115,7 +1115,7 @@ a.uk-link-reset,
  */
 
 .uk-description-list > dt {
-  color: #333;
+  color: #231f20;
 }
 
 .uk-description-list > dt:nth-child(n+2) {
@@ -2458,7 +2458,7 @@ select.uk-form-width-xsmall {
 
 .uk-button-default {
   background-color: #e5e5e5;
-  color: #333;
+  color: #231f20;
 }
 
 /* Hover + Focus */
@@ -2466,7 +2466,7 @@ select.uk-form-width-xsmall {
 .uk-button-default:hover,
 .uk-button-default:focus {
   background-color: #d8d8d8;
-  color: #333;
+  color: #231f20;
 }
 
 /* OnClick + Active */
@@ -2474,7 +2474,7 @@ select.uk-form-width-xsmall {
 .uk-button-default:active,
 .uk-button-default.uk-active {
   background-color: #cccccc;
-  color: #333;
+  color: #231f20;
 }
 
 /*
@@ -3516,7 +3516,7 @@ select.uk-form-width-xsmall {
 /* OnClick */
 
 .uk-totop:active {
-  color: #333;
+  color: #231f20;
 }
 
 /* ========================================================================
@@ -4207,7 +4207,7 @@ select.uk-form-width-xsmall {
   display: block;
   font-size: 1.25rem;
   line-height: 1.4;
-  color: #333;
+  color: #231f20;
 }
 
 /* Hover + Focus */
@@ -4351,7 +4351,7 @@ select.uk-form-width-xsmall {
  */
 
 .uk-dropdown-nav .uk-nav-header {
-  color: #333;
+  color: #231f20;
 }
 
 /*
@@ -6274,7 +6274,7 @@ ul.uk-nav-sub {
 /* Active */
 
 .uk-nav-default > li.uk-active > a {
-  color: #333;
+  color: #231f20;
 }
 
 /*
@@ -6282,7 +6282,7 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-default .uk-nav-header {
-  color: #333;
+  color: #231f20;
 }
 
 /*
@@ -6307,7 +6307,7 @@ ul.uk-nav-sub {
 }
 
 .uk-nav-default .uk-nav-sub li.uk-active > a {
-  color: #333;
+  color: #231f20;
 }
 
 /* Primary modifier
@@ -6333,7 +6333,7 @@ ul.uk-nav-sub {
 /* Active */
 
 .uk-nav-primary > li.uk-active > a {
-  color: #333;
+  color: #231f20;
 }
 
 /*
@@ -6341,7 +6341,7 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-primary .uk-nav-header {
-  color: #333;
+  color: #231f20;
 }
 
 /*
@@ -6366,7 +6366,7 @@ ul.uk-nav-sub {
 }
 
 .uk-nav-primary .uk-nav-sub li.uk-active > a {
-  color: #333;
+  color: #231f20;
 }
 
 /* Alignment modifier
@@ -6569,13 +6569,13 @@ ul.uk-nav-sub {
 /* OnClick */
 
 .uk-navbar-nav > li > a:active {
-  color: #333;
+  color: #231f20;
 }
 
 /* Active */
 
 .uk-navbar-nav > li.uk-active > a {
-  color: #333;
+  color: #231f20;
 }
 
 /* Item
@@ -6749,7 +6749,7 @@ ul.uk-nav-sub {
 /* Active */
 
 .uk-navbar-dropdown-nav > li.uk-active > a {
-  color: #333;
+  color: #231f20;
 }
 
 /*
@@ -6757,7 +6757,7 @@ ul.uk-nav-sub {
  */
 
 .uk-navbar-dropdown-nav .uk-nav-header {
-  color: #333;
+  color: #231f20;
 }
 
 /*
@@ -6782,7 +6782,7 @@ ul.uk-nav-sub {
 }
 
 .uk-navbar-dropdown-nav .uk-nav-sub li.uk-active > a {
-  color: #333;
+  color: #231f20;
 }
 
 /* Dropbar
@@ -6868,7 +6868,7 @@ ul.uk-nav-sub {
 /* Active */
 
 .uk-subnav > .uk-active > a {
-  color: #333;
+  color: #231f20;
 }
 
 /* Divider modifier
@@ -7150,7 +7150,7 @@ ul.uk-nav-sub {
 /* Active */
 
 .uk-tab > .uk-active > a {
-  color: #333;
+  color: #231f20;
 }
 
 /* Disabled */
@@ -9014,7 +9014,7 @@ ul.uk-nav-sub {
 .uk-text-lead {
   font-size: 1.5rem;
   line-height: 1.5;
-  color: #333;
+  color: #231f20;
 }
 
 .uk-text-meta {
@@ -9094,7 +9094,7 @@ ul.uk-nav-sub {
 }
 
 .uk-text-emphasis {
-  color: #333 !important;
+  color: #231f20 !important;
 }
 
 .uk-text-primary {

@@ -6,9 +6,19 @@ Changelog labels are any of the following:
 
 - [BUGFIX], [CHANGE], [CODEQUALITY], [DEPENDENCY], [ENHANCEMENT], [OTHER], [TRANSLATION]
 
+### Minor Release
+
+### Version 0.2.0 (2020-08-09)
+
+- [ENHANCEMENT] Added icons, new links, footer, and refined color scheme.
+- [ENHANCEMENT] Options popup still optionless, but at least no dead links.
+- [DEPENDENCY] Upgraded to WebExt 5.0.0.
+
+### Minor Release
+
 ### Version 0.1.0 (2020-07-02)
 
-- [ENHANCEMENT] Custom UIKiu theme initialized.
+- [ENHANCEMENT] Custom UIKit theme initialized.
 - [ENHANCEMENT] Added content to NewTab page, using UIKit.
 
 ### Version 0.0.6 (2020-06-23)
