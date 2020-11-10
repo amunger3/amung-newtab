@@ -86,6 +86,42 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/node-fetch/browser.js":
+/*!********************************************!*\
+  !*** ./node_modules/node-fetch/browser.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// ref: https://github.com/tc39/proposal-global
+var getGlobal = function () {
+	// the only reliable means to get the global object is
+	// `Function('return this')()`
+	// However, this causes CSP violations in Chrome apps.
+	if (typeof self !== 'undefined') { return self; }
+	if (typeof window !== 'undefined') { return window; }
+	if (typeof global !== 'undefined') { return global; }
+	throw new Error('unable to locate global object');
+}
+
+var global = getGlobal();
+
+module.exports = exports = global.fetch;
+
+// Needed for TypeScript and Webpack.
+if (global.fetch) {
+	exports.default = global.fetch.bind(global);
+}
+
+exports.Headers = global.Headers;
+exports.Request = global.Request;
+exports.Response = global.Response;
+
+/***/ }),
+
 /***/ "./node_modules/uikit/dist/js/uikit-icons.js":
 /*!***************************************************!*\
   !*** ./node_modules/uikit/dist/js/uikit-icons.js ***!
@@ -12405,6 +12441,39 @@
 
 /***/ }),
 
+/***/ "./node_modules/webpack/buildin/module.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/module.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function(module) {
+	if (!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+
 /***/ "./src/js/pre/app.js":
 /*!***************************!*\
   !*** ./src/js/pre/app.js ***!
@@ -12421,7 +12490,132 @@ __webpack_require__.r(__webpack_exports__);
 
  // loads the Icon plugin
 
-uikit__WEBPACK_IMPORTED_MODULE_0___default.a.use(uikit_dist_js_uikit_icons__WEBPACK_IMPORTED_MODULE_1___default.a);
+uikit__WEBPACK_IMPORTED_MODULE_0___default.a.use(uikit_dist_js_uikit_icons__WEBPACK_IMPORTED_MODULE_1___default.a); // Fetch JSON initialization
+
+var fetchJson = __webpack_require__(/*! ../vendor/fetch-json.js */ "./src/js/vendor/fetch-json.js");
+
+var url = 'https://api.sofascore.com/api/v1/sport/football/trending-top-players';
+
+var handleData = function handleData(data) {
+  return toJson(data);
+};
+
+var ttp = fetchJson.get(url).then(handleData);
+console.log(ttp);
+
+/***/ }),
+
+/***/ "./src/js/vendor/fetch-json.js":
+/*!*************************************!*\
+  !*** ./src/js/vendor/fetch-json.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module) {function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+//! fetch-json v2.2.9 ~ github.com/center-key/fetch-json ~ MIT License
+var fetch = (typeof window === "undefined" ? "undefined" : _typeof(window)) === 'object' && window.fetch || __webpack_require__(/*! node-fetch */ "./node_modules/node-fetch/browser.js");
+
+var fetchJson = {
+  version: '2.2.9',
+  request: function request(method, url, data, options) {
+    var defaults = {
+      method: method.toUpperCase(),
+      credentials: 'same-origin',
+      strictErrors: false
+    };
+
+    var settings = _objectSpread(_objectSpread({}, defaults), options);
+
+    var isGetRequest = settings.method === 'GET';
+    var jsonHeaders = {
+      'Accept': 'application/json'
+    };
+    if (!isGetRequest && data) jsonHeaders['Content-Type'] = 'application/json';
+    settings.headers = _objectSpread(_objectSpread({}, jsonHeaders), options && options.headers);
+
+    var toPair = function toPair(key) {
+      return key + '=' + encodeURIComponent(data[key]);
+    }; //build query string field-value
+
+
+    var paramKeys = isGetRequest && data && Object.keys(data);
+    if (paramKeys && paramKeys.length) url = url + (url.includes('?') ? '&' : '?') + paramKeys.map(toPair).join('&');
+    if (!isGetRequest && data) settings.body = JSON.stringify(data);
+    var logUrl = url.replace(/[?].*/, ''); //security: prevent logging url parameters
+
+    var logDomain = logUrl.replace(/.*:[/][/]/, '').replace(/[:/].*/, ''); //extract hostname
+
+    var toJson = function toJson(response) {
+      var contentType = response.headers.get('content-type');
+      var isJson = /json|javascript/.test(contentType); //match "application/json" or "text/javascript"
+
+      var textToObj = function textToObj(httpBody) {
+        //rest calls should only return json
+        response.error = !response.ok;
+        response.contentType = contentType;
+        response.bodyText = httpBody;
+        return response;
+      };
+
+      if (fetchJson.logger) fetchJson.logger(new Date().toISOString(), 'response', settings.method, logDomain, logUrl, response.ok, response.status, response.statusText, contentType);
+      if (settings.strictErrors && !response.ok) throw Error('HTTP response status ("strictErrors" mode enabled): ' + response.status);
+      return isJson ? response.json() : response.text().then(textToObj);
+    };
+
+    if (fetchJson.logger) fetchJson.logger(new Date().toISOString(), 'request', settings.method, logDomain, logUrl);
+    return fetch(url, settings).then(toJson);
+  },
+  get: function get(url, params, options) {
+    return fetchJson.request('GET', url, params, options);
+  },
+  post: function post(url, resource, options) {
+    return fetchJson.request('POST', url, resource, options);
+  },
+  put: function put(url, resource, options) {
+    return fetchJson.request('PUT', url, resource, options);
+  },
+  patch: function patch(url, resource, options) {
+    return fetchJson.request('PATCH', url, resource, options);
+  },
+  "delete": function _delete(url, resource, options) {
+    return fetchJson.request('DELETE', url, resource, options);
+  },
+  logger: null,
+  //null or a function
+  getLogHeaders: function getLogHeaders() {
+    return ['Timestamp', 'HTTP', 'Method', 'Domain', 'URL', 'Ok', 'Status', 'Text', 'Type'];
+  },
+  getLogHeaderIndex: function getLogHeaderIndex() {
+    return {
+      timestamp: 0,
+      http: 1,
+      method: 2,
+      domain: 3,
+      url: 4,
+      ok: 5,
+      status: 6,
+      text: 7,
+      type: 8
+    };
+  },
+  enableLogger: function enableLogger(booleanOrFn) {
+    var isFn = typeof booleanOrFn === 'function';
+    fetchJson.logger = isFn ? booleanOrFn : booleanOrFn === false ? null : console.log;
+    return fetchJson.logger;
+  }
+};
+if (( false ? undefined : _typeof(module)) === 'object') module.exports = fetchJson; //node module loading system (CommonJS)
+
+if ((typeof window === "undefined" ? "undefined" : _typeof(window)) === 'object') window.fetchJson = fetchJson; //support both global and window property
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
 
 /***/ }),
 

@@ -1,5 +1,6 @@
 {
     "/src/js/app.js": "/src/js/app.js",
     "/src/css/app.css": "/src/css/app.css",
+    "/src/js/vendor/fetch-json.js": "/src/js/vendor/fetch-json.js",
     "/src/js/vendor/jquery.js": "/src/js/vendor/jquery.js"
 }
