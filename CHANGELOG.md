@@ -1,12 +1,16 @@
 # Firefox Add-on: AMung — NewTab
 
-## Release Notes
+## Changelog
 
 Changelog labels are any of the following:
 
 - [BUGFIX], [CHANGE], [CODEQUALITY], [DEPENDENCY], [ENHANCEMENT], [OTHER], [TRANSLATION]
 
-### Minor Release
+### Version 0.2.1 (2020-11-09)
+
+- [DEPENDENCY] Upgraded many dependencies. See package.json diffs for details.
+
+### Minor Release 0.2
 
 ### Version 0.2.0 (2020-08-09)
 
@@ -14,7 +18,7 @@ Changelog labels are any of the following:
 - [ENHANCEMENT] Options popup still optionless, but at least no dead links.
 - [DEPENDENCY] Upgraded to WebExt 5.0.0.
 
-### Minor Release
+### Minor Release 0.1
 
 ### Version 0.1.0 (2020-07-02)
 
