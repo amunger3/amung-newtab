@@ -59,7 +59,6 @@
         "sourceDir": "src"
     },
     "dependencies": {
-        "fetch-json": "^2.2.9",
         "jquery": "^3.5.1",
         "node-fetch": "^2.6.1",
         "uniq": "^1.0.1"
