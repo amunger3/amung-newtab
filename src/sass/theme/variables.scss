@@ -12,9 +12,7 @@
 //
 
 $global-font-family:                             Nunito, sans-serif !default;
-
 $base-code-font-family:                          'Victor Mono', 'Fira Code', monospace !default;
-
 $link-heading-hover-text-decoration:             underline !default;
 
 //
@@ -23,7 +21,8 @@ $link-heading-hover-text-decoration:             underline !default;
 
 
 $global-emphasis-color:                          #231f20 !default;
-$global-muted-color:                             #999 !default;
+$global-muted-color:                             #999999 !default;
+$global-inverse-color:                           #fcfcfc !default;
 
 $global-link-color:                              #6554c0 !default;
 $global-link-hover-color:                        #403294 !default;
@@ -37,12 +36,9 @@ $base-selection-background:                      #7d52c4 !default;
 //
 
 $global-background:                              #ffffff !default;
-
 $global-muted-background:                        #e5e5e5 !default;
 $global-primary-background:                      #6554c0 !default;
 $global-secondary-background:                    #333333 !default;
-
-$global-primary-background:                      #1e87f0 !default;
 
 $global-danger-background:                       #faa04c !default;
 $global-warning-background:                      #e5f794 !default;

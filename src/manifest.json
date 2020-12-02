@@ -19,6 +19,10 @@
             "js/background.js"
         ]
     },
+    "content-scripts": {
+        "matches": ["<all_urls>"],
+        "js": ["js/content_scripts/switch.js"]
+    },
     "chrome-settings-overrides": {},
     "chrome_url_overrides": {
         "newtab": "amung.html"
@@ -55,6 +59,7 @@
     },
     "permissions": [
         "history",
+        "management",
         "menus",
         "storage",
         "tabs"

@@ -1,7 +1,12 @@
-@import "theme/base.scss";
-@import "theme/card.scss";
-@import "theme/variables.scss";
+// Order is essential.
 
-@import "uikit/variables.scss";
+/* 1 */
 @import "uikit/mixins.scss";
+/* 2 */
+@import "theme/_import.scss";
+/* 3 */
+@import "theme/_colors.scss";
+/* 4 */
+@import "uikit/variables.scss";
+/* 5 */
 @import "uikit/uikit.scss";

@@ -1,0 +1,25 @@
+:root,
+[data-theme="default"] {
+    $global-background:           #ffffff !default;
+    $global-muted-background:     #e5e5e5 !default;
+    $global-inverse-color:        #fcfcfc !default;
+    $global-muted-color:          #999999 !default;
+    $global-secondary-background: #333333 !default;
+    $global-emphasis-color:       #231f20 !default;
+}
+
+[data-theme] {
+    background-color: $global-background;
+    color:            $global-secondary-background;
+}
+
+@supports(--css: variables) {
+    [data-theme="dark"] {
+        $global-background:           #333333 !default;
+        $global-muted-background:     #999999 !default;
+        $global-inverse-color:        #231f20 !default;
+        $global-muted-color:          #e5e5e5 !default;
+        $global-secondary-background: #ffffff !default;
+        $global-emphasis-color:       #fcfcfc !default;
+    }
+}

@@ -1,11 +1,68 @@
 @charset "UTF-8";
 
+/* 1 */
+
+/* 2 */
+
 a:focus,
 .uk-link:focus {
   color: #403294;
   text-decoration: underline;
   border: 3px solid #6554c0;
 }
+
+/* Checkbox (Toggle)
+ ========================================================================== */
+
+.uk-checkbox {
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  margin-top: -4px;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #8779ce;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+/* Focus */
+
+.uk-checkbox:focus {
+  outline: none;
+}
+
+/* Checked */
+
+.uk-checkbox:checked,
+.uk-checkbox:indeterminate {
+  background-color: #44e89b;
+}
+
+/* Focus */
+
+.uk-checkbox:checked:focus,
+.uk-checkbox:indeterminate:focus {
+  background-color: #15b168;
+}
+
+/* Disabled */
+
+.uk-checkbox:disabled {
+  background-color: #e5e5e5;
+}
+
+/* 3 */
+
+[data-theme] {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* 4 */
+
+/* 5 */
 
 /* ========================================================================
    Component: Base
@@ -505,13 +562,13 @@ pre code {
 
 ::-moz-selection {
   background: #7d52c4;
-  color: #fff;
+  color: #fcfcfc;
   text-shadow: none;
 }
 
 ::selection {
   background: #7d52c4;
-  color: #fff;
+  color: #fcfcfc;
   text-shadow: none;
 }
 
@@ -584,7 +641,7 @@ template {
 
 a.uk-link-muted,
 .uk-link-muted a {
-  color: #999;
+  color: #999999;
 }
 
 a.uk-link-muted:hover,
@@ -606,7 +663,7 @@ a.uk-link-text:hover,
 .uk-link-text a:hover,
 .uk-link-toggle:hover .uk-link-text,
 .uk-link-toggle:focus .uk-link-text {
-  color: #999;
+  color: #999999;
 }
 
 /* Heading
@@ -998,7 +1055,7 @@ a.uk-link-reset,
  */
 
 .uk-list-muted > ::before {
-  color: #999 !important;
+  color: #999999 !important;
 }
 
 .uk-list-emphasis > ::before {
@@ -1211,7 +1268,7 @@ a.uk-link-reset,
 .uk-table caption {
   font-size: 0.875rem;
   text-align: left;
-  color: #999;
+  color: #999999;
 }
 
 /* Alignment modifier
@@ -1466,7 +1523,7 @@ button.uk-icon:not(:disabled) {
  */
 
 .uk-icon-link {
-  color: #999;
+  color: #999999;
 }
 
 .uk-icon-link:hover,
@@ -1493,7 +1550,7 @@ button.uk-icon:not(:disabled) {
   height: 36px;
   border-radius: 500px;
   background: #e5e5e5;
-  color: #999;
+  color: #999999;
   vertical-align: middle;
   /* 1 */
   display: inline-flex;
@@ -1884,7 +1941,7 @@ button.uk-icon:not(:disabled) {
 .uk-select:disabled,
 .uk-textarea:disabled {
   background-color: #e5e5e5;
-  color: #999;
+  color: #999999;
 }
 
 /*
@@ -1892,27 +1949,27 @@ button.uk-icon:not(:disabled) {
  */
 
 .uk-input::-moz-placeholder {
-  color: #999;
+  color: #999999;
 }
 
 .uk-input:-ms-input-placeholder {
-  color: #999;
+  color: #999999;
 }
 
 .uk-input::placeholder {
-  color: #999;
+  color: #999999;
 }
 
 .uk-textarea::-moz-placeholder {
-  color: #999;
+  color: #999999;
 }
 
 .uk-textarea:-ms-input-placeholder {
-  color: #999;
+  color: #999999;
 }
 
 .uk-textarea::placeholder {
-  color: #999;
+  color: #999999;
 }
 
 /* Style modifier (`uk-input`, `uk-select` and `uk-textarea`)
@@ -2049,7 +2106,7 @@ select.uk-form-width-xsmall {
  */
 
 .uk-select:not([multiple]):not([size]):disabled {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23999%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23999%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23999999%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23999999%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
 }
 
 /* Datalist
@@ -2144,15 +2201,15 @@ select.uk-form-width-xsmall {
  */
 
 .uk-radio:checked {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23fff%22%20cx%3D%228%22%20cy%3D%228%22%20r%3D%222%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23fcfcfc%22%20cx%3D%228%22%20cy%3D%228%22%20r%3D%222%22%20%2F%3E%0A%3C%2Fsvg%3E");
 }
 
 .uk-checkbox:checked {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23fff%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23fcfcfc%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
 }
 
 .uk-checkbox:indeterminate {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23fff%22%20x%3D%223%22%20y%3D%228%22%20width%3D%2210%22%20height%3D%221%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23fcfcfc%22%20x%3D%223%22%20y%3D%228%22%20width%3D%2210%22%20height%3D%221%22%20%2F%3E%0A%3C%2Fsvg%3E");
 }
 
 /*
@@ -2165,15 +2222,15 @@ select.uk-form-width-xsmall {
 }
 
 .uk-radio:disabled:checked {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23999%22%20cx%3D%228%22%20cy%3D%228%22%20r%3D%222%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22%23999999%22%20cx%3D%228%22%20cy%3D%228%22%20r%3D%222%22%20%2F%3E%0A%3C%2Fsvg%3E");
 }
 
 .uk-checkbox:disabled:checked {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23999%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23999999%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
 }
 
 .uk-checkbox:disabled:indeterminate {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23999%22%20x%3D%223%22%20y%3D%228%22%20width%3D%2210%22%20height%3D%221%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23999999%22%20x%3D%223%22%20y%3D%228%22%20width%3D%2210%22%20height%3D%221%22%20%2F%3E%0A%3C%2Fsvg%3E");
 }
 
 /* Legend
@@ -2326,7 +2383,7 @@ select.uk-form-width-xsmall {
   justify-content: center;
   align-items: center;
   /* 4 */
-  color: #999;
+  color: #999999;
 }
 
 /*
@@ -2475,7 +2532,7 @@ select.uk-form-width-xsmall {
 
 .uk-button-primary {
   background-color: #6554c0;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 /* Hover + Focus */
@@ -2483,7 +2540,7 @@ select.uk-form-width-xsmall {
 .uk-button-primary:hover,
 .uk-button-primary:focus {
   background-color: #5643b7;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 /* OnClick + Active */
@@ -2491,7 +2548,7 @@ select.uk-form-width-xsmall {
 .uk-button-primary:active,
 .uk-button-primary.uk-active {
   background-color: #4d3da4;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 /*
@@ -2500,7 +2557,7 @@ select.uk-form-width-xsmall {
 
 .uk-button-secondary {
   background-color: #333333;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 /* Hover + Focus */
@@ -2508,7 +2565,7 @@ select.uk-form-width-xsmall {
 .uk-button-secondary:hover,
 .uk-button-secondary:focus {
   background-color: #262626;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 /* OnClick + Active */
@@ -2516,7 +2573,7 @@ select.uk-form-width-xsmall {
 .uk-button-secondary:active,
 .uk-button-secondary.uk-active {
   background-color: #1a1a1a;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 /*
@@ -2525,7 +2582,7 @@ select.uk-form-width-xsmall {
 
 .uk-button-danger {
   background-color: #faa04c;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 /* Hover + Focus */
@@ -2533,7 +2590,7 @@ select.uk-form-width-xsmall {
 .uk-button-danger:hover,
 .uk-button-danger:focus {
   background-color: #f99333;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 /* OnClick + Active */
@@ -2541,7 +2598,7 @@ select.uk-form-width-xsmall {
 .uk-button-danger:active,
 .uk-button-danger.uk-active {
   background-color: #f9861a;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 /*
@@ -2554,7 +2611,7 @@ select.uk-form-width-xsmall {
 .uk-button-secondary:disabled,
 .uk-button-danger:disabled {
   background-color: #e5e5e5;
-  color: #999;
+  color: #999999;
 }
 
 /* Size modifiers
@@ -2587,7 +2644,7 @@ select.uk-form-width-xsmall {
   line-height: 1.5;
   background: none;
   /* 2 */
-  color: #999;
+  color: #999999;
 }
 
 /* Hover + Focus */
@@ -2600,7 +2657,7 @@ select.uk-form-width-xsmall {
 /* Disabled */
 
 .uk-button-text:disabled {
-  color: #999;
+  color: #999999;
 }
 
 /*
@@ -2629,7 +2686,7 @@ select.uk-form-width-xsmall {
 /* Disabled */
 
 .uk-button-link:disabled {
-  color: #999;
+  color: #999999;
   text-decoration: none;
 }
 
@@ -3313,11 +3370,11 @@ select.uk-form-width-xsmall {
 
 .uk-card-primary {
   background: #6554c0;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-card-primary .uk-card-title {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-card-primary.uk-card-hover:hover {
@@ -3330,11 +3387,11 @@ select.uk-form-width-xsmall {
 
 .uk-card-secondary {
   background: #333333;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-card-secondary .uk-card-title {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-card-secondary.uk-card-hover:hover {
@@ -3391,7 +3448,7 @@ select.uk-form-width-xsmall {
  */
 
 .uk-close {
-  color: #999;
+  color: #999999;
 }
 
 /* Hover + Focus */
@@ -3494,7 +3551,7 @@ select.uk-form-width-xsmall {
 
 .uk-totop {
   padding: 5px;
-  color: #999;
+  color: #999999;
 }
 
 /* Hover + Focus */
@@ -3522,14 +3579,14 @@ select.uk-form-width-xsmall {
 .uk-marker {
   padding: 5px;
   background: #333333;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 /* Hover + Focus */
 
 .uk-marker:hover,
 .uk-marker:focus {
-  color: #fff;
+  color: #fcfcfc;
   outline: none;
 }
 
@@ -3662,7 +3719,7 @@ select.uk-form-width-xsmall {
   vertical-align: middle;
   /* 1 */
   background: #6554c0;
-  color: #fff;
+  color: #fcfcfc;
   font-size: 0.875rem;
   /* 2 */
   display: inline-flex;
@@ -3676,7 +3733,7 @@ select.uk-form-width-xsmall {
 
 .uk-badge:hover,
 .uk-badge:focus {
-  color: #fff;
+  color: #fcfcfc;
   text-decoration: none;
   outline: none;
 }
@@ -3691,7 +3748,7 @@ select.uk-form-width-xsmall {
   background: #6554c0;
   line-height: 1.5;
   font-size: 0.875rem;
-  color: #fff;
+  color: #fcfcfc;
   vertical-align: middle;
   white-space: nowrap;
 }
@@ -3705,7 +3762,7 @@ select.uk-form-width-xsmall {
 
 .uk-label-success {
   background-color: #1bde83;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 /*
@@ -3714,7 +3771,7 @@ select.uk-form-width-xsmall {
 
 .uk-label-warning {
   background-color: #e5f794;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 /*
@@ -3723,7 +3780,7 @@ select.uk-form-width-xsmall {
 
 .uk-label-danger {
   background-color: #faa04c;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 /* ========================================================================
@@ -3809,7 +3866,7 @@ select.uk-form-width-xsmall {
 .uk-article-meta {
   font-size: 0.875rem;
   line-height: 1.4;
-  color: #999;
+  color: #999999;
 }
 
 /* ========================================================================
@@ -3853,7 +3910,7 @@ select.uk-form-width-xsmall {
 .uk-comment-meta {
   font-size: 0.875rem;
   line-height: 1.4;
-  color: #999;
+  color: #999999;
 }
 
 /* Avatar
@@ -3984,15 +4041,15 @@ select.uk-form-width-xsmall {
 /* Placeholder */
 
 .uk-search-input:-ms-input-placeholder {
-  color: #999 !important;
+  color: #999999 !important;
 }
 
 .uk-search-input::-moz-placeholder {
-  color: #999;
+  color: #999999;
 }
 
 .uk-search-input::placeholder {
-  color: #999;
+  color: #999999;
 }
 
 /* Icon (Adopts `uk-icon`)
@@ -4024,7 +4081,7 @@ select.uk-form-width-xsmall {
   justify-content: center;
   align-items: center;
   /* 3 */
-  color: #999;
+  color: #999999;
 }
 
 /*
@@ -4032,7 +4089,7 @@ select.uk-form-width-xsmall {
  */
 
 .uk-search .uk-search-icon:hover {
-  color: #999;
+  color: #999999;
 }
 
 /*
@@ -4162,7 +4219,7 @@ select.uk-form-width-xsmall {
  ========================================================================== */
 
 .uk-search-toggle {
-  color: #999;
+  color: #999999;
 }
 
 /* Hover + Focus */
@@ -4323,7 +4380,7 @@ select.uk-form-width-xsmall {
  */
 
 .uk-dropdown-nav > li > a {
-  color: #999;
+  color: #999999;
 }
 
 /* Hover + Focus + Active */
@@ -4355,7 +4412,7 @@ select.uk-form-width-xsmall {
  */
 
 .uk-dropdown-nav .uk-nav-sub a {
-  color: #999;
+  color: #999999;
 }
 
 .uk-dropdown-nav .uk-nav-sub a:hover,
@@ -4616,7 +4673,7 @@ select.uk-form-width-xsmall {
 }
 
 .uk-modal-close-outside:hover {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 /* Tablet landscape and bigger */
@@ -4730,12 +4787,20 @@ select.uk-form-width-xsmall {
  ========================================================================== */
 
 /*
- * 1. Clip child elements
+ * Clip child elements
  */
 
 .uk-slider-container {
-  /* 1 */
   overflow: hidden;
+}
+
+/*
+ * Widen container to prevent box-shadows from clipping, `large-box-shadow`
+ */
+
+.uk-slider-container-offset {
+  margin: -11px -25px -39px -25px;
+  padding: 11px 25px 39px 25px;
 }
 
 /* Items
@@ -5322,7 +5387,7 @@ select.uk-form-width-xsmall {
   /* 5 */
   background: #666;
   border-radius: 2px;
-  color: #fff;
+  color: #fcfcfc;
   font-size: 12px;
 }
 
@@ -6069,7 +6134,7 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-default > li > a {
-  color: #999;
+  color: #999999;
 }
 
 /* Hover + Focus */
@@ -6106,7 +6171,7 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-default .uk-nav-sub a {
-  color: #999;
+  color: #999999;
 }
 
 .uk-nav-default .uk-nav-sub a:hover,
@@ -6128,7 +6193,7 @@ ul.uk-nav-sub {
 .uk-nav-primary > li > a {
   font-size: 1.5rem;
   line-height: 1.5;
-  color: #999;
+  color: #999999;
 }
 
 /* Hover + Focus */
@@ -6165,7 +6230,7 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-primary .uk-nav-sub a {
-  color: #999;
+  color: #999999;
 }
 
 .uk-nav-primary .uk-nav-sub a:hover,
@@ -6215,7 +6280,7 @@ ul.uk-nav-sub {
  ========================================================================== */
 
 .uk-navbar-container:not(.uk-navbar-transparent) {
-  background: #e5e5e5;
+  background: #ffffff;
 }
 
 /*
@@ -6359,7 +6424,7 @@ ul.uk-nav-sub {
  */
 
 .uk-navbar-nav > li > a {
-  color: #999;
+  color: #999999;
 }
 
 /*
@@ -6397,7 +6462,7 @@ ul.uk-nav-sub {
  ========================================================================== */
 
 .uk-navbar-toggle {
-  color: #999;
+  color: #999999;
 }
 
 .uk-navbar-toggle:hover,
@@ -6544,7 +6609,7 @@ ul.uk-nav-sub {
  */
 
 .uk-navbar-dropdown-nav > li > a {
-  color: #999;
+  color: #999999;
 }
 
 /* Hover + Focus */
@@ -6581,7 +6646,7 @@ ul.uk-nav-sub {
  */
 
 .uk-navbar-dropdown-nav .uk-nav-sub a {
-  color: #999;
+  color: #999999;
 }
 
 .uk-navbar-dropdown-nav .uk-nav-sub a:hover,
@@ -6661,7 +6726,7 @@ ul.uk-nav-sub {
   /* 1 */
   display: block;
   /* 2 */
-  color: #999;
+  color: #999999;
 }
 
 /* Hover + Focus */
@@ -6724,7 +6789,7 @@ ul.uk-nav-sub {
 .uk-subnav-pill > * > :first-child {
   padding: 5px 10px;
   background: transparent;
-  color: #999;
+  color: #999999;
 }
 
 /* Hover + Focus */
@@ -6746,7 +6811,7 @@ ul.uk-nav-sub {
 
 .uk-subnav-pill > .uk-active > a {
   background-color: #6554c0;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 /* Disabled
@@ -6754,7 +6819,7 @@ ul.uk-nav-sub {
  ========================================================================== */
 
 .uk-subnav > .uk-disabled > a {
-  color: #999;
+  color: #999999;
 }
 
 /* ========================================================================
@@ -6783,7 +6848,7 @@ ul.uk-nav-sub {
 
 .uk-breadcrumb > * > * {
   font-size: 0.875rem;
-  color: #999;
+  color: #999999;
 }
 
 /* Hover + Focus */
@@ -6806,14 +6871,18 @@ ul.uk-nav-sub {
 /*
  * Divider
  * `nth-child` makes it also work without JS if it's only one row
+ * 1. Remove space between inline block elements.
+ * 2. Style
  */
 
 .uk-breadcrumb > :nth-child(n+2):not(.uk-first-column)::before {
   content: "/";
   display: inline-block;
-  margin: 0 20px;
+  /* 1 */
+  margin: 0 20px 0 calc(20px - 4px);
+  /* 2 */
   font-size: 0.875rem;
-  color: #999;
+  color: #999999;
 }
 
 /* ========================================================================
@@ -6865,7 +6934,7 @@ ul.uk-nav-sub {
   display: block;
   /* 2 */
   padding: 5px 10px;
-  color: #999;
+  color: #999999;
 }
 
 /* Hover + Focus */
@@ -6885,7 +6954,7 @@ ul.uk-nav-sub {
 /* Disabled */
 
 .uk-pagination > .uk-disabled > * {
-  color: #999;
+  color: #999999;
 }
 
 /* ========================================================================
@@ -6939,7 +7008,7 @@ ul.uk-nav-sub {
   text-align: center;
   /* 2 */
   padding: 5px 10px;
-  color: #999;
+  color: #999999;
 }
 
 /* Hover + Focus */
@@ -6959,7 +7028,7 @@ ul.uk-nav-sub {
 /* Disabled */
 
 .uk-tab > .uk-disabled > a {
-  color: #999;
+  color: #999999;
 }
 
 /* Position modifier
@@ -7266,7 +7335,7 @@ ul.uk-nav-sub {
   /* 1 */
   display: block;
   /* 2 */
-  color: #999;
+  color: #999999;
 }
 
 /* Hover + Focus */
@@ -9004,7 +9073,7 @@ ul.uk-nav-sub {
 .uk-text-meta {
   font-size: 0.875rem;
   line-height: 1.4;
-  color: #999;
+  color: #999999;
 }
 
 /* Size modifiers
@@ -9074,7 +9143,7 @@ ul.uk-nav-sub {
  ========================================================================== */
 
 .uk-text-muted {
-  color: #999 !important;
+  color: #999999 !important;
 }
 
 .uk-text-emphasis {
@@ -11804,7 +11873,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]),
 .uk-overlay-primary,
 .uk-offcanvas-bar {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light a,
@@ -11829,7 +11898,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-link,
 .uk-overlay-primary .uk-link,
 .uk-offcanvas-bar .uk-link {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light a:hover,
@@ -11854,7 +11923,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-link:hover,
 .uk-overlay-primary .uk-link:hover,
 .uk-offcanvas-bar .uk-link:hover {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light :not(pre) > code,
@@ -11890,7 +11959,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) :not(pre) > samp,
 .uk-overlay-primary :not(pre) > samp,
 .uk-offcanvas-bar :not(pre) > samp {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light em,
@@ -11904,7 +11973,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) em,
 .uk-overlay-primary em,
 .uk-offcanvas-bar em {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light h1,
@@ -12094,7 +12163,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-heading-2xlarge,
 .uk-overlay-primary .uk-heading-2xlarge,
 .uk-offcanvas-bar .uk-heading-2xlarge {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light hr,
@@ -12119,7 +12188,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-hr,
 .uk-overlay-primary .uk-hr,
 .uk-offcanvas-bar .uk-hr {
-  border-top-color: rgba(255, 255, 255, 0.2);
+  border-top-color: rgba(252, 252, 252, 0.2);
 }
 
 .uk-light a.uk-link-muted,
@@ -12144,7 +12213,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-link-muted a,
 .uk-overlay-primary .uk-link-muted a,
 .uk-offcanvas-bar .uk-link-muted a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light a.uk-link-muted:hover,
@@ -12191,7 +12260,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-link-toggle:focus .uk-link-muted,
 .uk-overlay-primary .uk-link-toggle:focus .uk-link-muted,
 .uk-offcanvas-bar .uk-link-toggle:focus .uk-link-muted {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light a.uk-link-text:hover,
@@ -12238,7 +12307,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-link-toggle:focus .uk-link-text,
 .uk-overlay-primary .uk-link-toggle:focus .uk-link-text,
 .uk-offcanvas-bar .uk-link-toggle:focus .uk-link-text {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light a.uk-link-heading:hover,
@@ -12285,7 +12354,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-link-toggle:focus .uk-link-heading,
 .uk-overlay-primary .uk-link-toggle:focus .uk-link-heading,
 .uk-offcanvas-bar .uk-link-toggle:focus .uk-link-heading {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light .uk-heading-divider,
@@ -12299,7 +12368,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-heading-divider,
 .uk-overlay-primary .uk-heading-divider,
 .uk-offcanvas-bar .uk-heading-divider {
-  border-bottom-color: rgba(255, 255, 255, 0.2);
+  border-bottom-color: rgba(252, 252, 252, 0.2);
 }
 
 .uk-light .uk-heading-bullet::before,
@@ -12313,7 +12382,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-heading-bullet::before,
 .uk-overlay-primary .uk-heading-bullet::before,
 .uk-offcanvas-bar .uk-heading-bullet::before {
-  border-left-color: rgba(255, 255, 255, 0.2);
+  border-left-color: rgba(252, 252, 252, 0.2);
 }
 
 .uk-light .uk-heading-line > ::before,
@@ -12338,7 +12407,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-heading-line > ::after,
 .uk-overlay-primary .uk-heading-line > ::after,
 .uk-offcanvas-bar .uk-heading-line > ::after {
-  border-bottom-color: rgba(255, 255, 255, 0.2);
+  border-bottom-color: rgba(252, 252, 252, 0.2);
 }
 
 .uk-light .uk-divider-icon,
@@ -12352,7 +12421,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-divider-icon,
 .uk-overlay-primary .uk-divider-icon,
 .uk-offcanvas-bar .uk-divider-icon {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22none%22%20stroke%3D%22rgba(255, 255, 255, 0.2)%22%20stroke-width%3D%222%22%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%227%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22none%22%20stroke%3D%22rgba(252, 252, 252, 0.2)%22%20stroke-width%3D%222%22%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%227%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
 }
 
 .uk-light .uk-divider-icon::before,
@@ -12377,7 +12446,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-divider-icon::after,
 .uk-overlay-primary .uk-divider-icon::after,
 .uk-offcanvas-bar .uk-divider-icon::after {
-  border-bottom-color: rgba(255, 255, 255, 0.2);
+  border-bottom-color: rgba(252, 252, 252, 0.2);
 }
 
 .uk-light .uk-divider-small::after,
@@ -12391,7 +12460,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-divider-small::after,
 .uk-overlay-primary .uk-divider-small::after,
 .uk-offcanvas-bar .uk-divider-small::after {
-  border-top-color: rgba(255, 255, 255, 0.2);
+  border-top-color: rgba(252, 252, 252, 0.2);
 }
 
 .uk-light .uk-divider-vertical,
@@ -12405,7 +12474,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-divider-vertical,
 .uk-overlay-primary .uk-divider-vertical,
 .uk-offcanvas-bar .uk-divider-vertical {
-  border-left-color: rgba(255, 255, 255, 0.2);
+  border-left-color: rgba(252, 252, 252, 0.2);
 }
 
 .uk-light .uk-list-muted > ::before,
@@ -12419,7 +12488,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-list-muted > ::before,
 .uk-overlay-primary .uk-list-muted > ::before,
 .uk-offcanvas-bar .uk-list-muted > ::before {
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(252, 252, 252, 0.5) !important;
 }
 
 .uk-light .uk-list-emphasis > ::before,
@@ -12433,7 +12502,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-list-emphasis > ::before,
 .uk-overlay-primary .uk-list-emphasis > ::before,
 .uk-offcanvas-bar .uk-list-emphasis > ::before {
-  color: #fff !important;
+  color: #fcfcfc !important;
 }
 
 .uk-light .uk-list-primary > ::before,
@@ -12447,7 +12516,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-list-primary > ::before,
 .uk-overlay-primary .uk-list-primary > ::before,
 .uk-offcanvas-bar .uk-list-primary > ::before {
-  color: #fff !important;
+  color: #fcfcfc !important;
 }
 
 .uk-light .uk-list-secondary > ::before,
@@ -12461,7 +12530,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-list-secondary > ::before,
 .uk-overlay-primary .uk-list-secondary > ::before,
 .uk-offcanvas-bar .uk-list-secondary > ::before {
-  color: #fff !important;
+  color: #fcfcfc !important;
 }
 
 .uk-light .uk-list-bullet > ::before,
@@ -12475,7 +12544,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-list-bullet > ::before,
 .uk-overlay-primary .uk-list-bullet > ::before,
 .uk-offcanvas-bar .uk-list-bullet > ::before {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%226%22%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22rgba(255, 255, 255, 0.7)%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%223%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%226%22%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22rgba(252, 252, 252, 0.7)%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%223%22%20%2F%3E%0A%3C%2Fsvg%3E");
 }
 
 .uk-light .uk-list-divider > :nth-child(n+2),
@@ -12489,7 +12558,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-list-divider > :nth-child(n+2),
 .uk-overlay-primary .uk-list-divider > :nth-child(n+2),
 .uk-offcanvas-bar .uk-list-divider > :nth-child(n+2) {
-  border-top-color: rgba(255, 255, 255, 0.2);
+  border-top-color: rgba(252, 252, 252, 0.2);
 }
 
 .uk-light .uk-list-striped > :nth-of-type(odd),
@@ -12503,7 +12572,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-list-striped > :nth-of-type(odd),
 .uk-overlay-primary .uk-list-striped > :nth-of-type(odd),
 .uk-offcanvas-bar .uk-list-striped > :nth-of-type(odd) {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(252, 252, 252, 0.1);
 }
 
 .uk-light .uk-icon-link,
@@ -12517,7 +12586,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-icon-link,
 .uk-overlay-primary .uk-icon-link,
 .uk-offcanvas-bar .uk-icon-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-icon-link:hover,
@@ -12542,7 +12611,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-icon-link:focus,
 .uk-overlay-primary .uk-icon-link:focus,
 .uk-offcanvas-bar .uk-icon-link:focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-icon-link:active,
@@ -12567,7 +12636,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-active > .uk-icon-link,
 .uk-overlay-primary .uk-active > .uk-icon-link,
 .uk-offcanvas-bar .uk-active > .uk-icon-link {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-icon-button,
@@ -12581,8 +12650,8 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-icon-button,
 .uk-overlay-primary .uk-icon-button,
 .uk-offcanvas-bar .uk-icon-button {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(252, 252, 252, 0.1);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-icon-button:hover,
@@ -12607,8 +12676,8 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-icon-button:focus,
 .uk-overlay-primary .uk-icon-button:focus,
 .uk-offcanvas-bar .uk-icon-button:focus {
-  background-color: rgba(242, 242, 242, 0.1);
-  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(239, 239, 239, 0.1);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-icon-button:active,
@@ -12622,8 +12691,8 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-icon-button:active,
 .uk-overlay-primary .uk-icon-button:active,
 .uk-offcanvas-bar .uk-icon-button:active {
-  background-color: rgba(230, 230, 230, 0.1);
-  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(227, 227, 227, 0.1);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-input,
@@ -12659,8 +12728,8 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea,
 .uk-overlay-primary .uk-textarea,
 .uk-offcanvas-bar .uk-textarea {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(252, 252, 252, 0.1);
+  color: rgba(252, 252, 252, 0.7);
   background-clip: padding-box;
 }
 
@@ -12697,16 +12766,16 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea:focus,
 .uk-overlay-primary .uk-textarea:focus,
 .uk-offcanvas-bar .uk-textarea:focus {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(252, 252, 252, 0.1);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-input::-moz-placeholder, .uk-section-primary:not(.uk-preserve-color) .uk-input::-moz-placeholder, .uk-section-secondary:not(.uk-preserve-color) .uk-input::-moz-placeholder, .uk-tile-primary:not(.uk-preserve-color) .uk-input::-moz-placeholder, .uk-tile-secondary:not(.uk-preserve-color) .uk-input::-moz-placeholder, .uk-card-primary.uk-card-body .uk-input::-moz-placeholder, .uk-card-primary > :not([class*=uk-card-media]) .uk-input::-moz-placeholder, .uk-card-secondary.uk-card-body .uk-input::-moz-placeholder, .uk-card-secondary > :not([class*=uk-card-media]) .uk-input::-moz-placeholder, .uk-overlay-primary .uk-input::-moz-placeholder, .uk-offcanvas-bar .uk-input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-input:-ms-input-placeholder, .uk-section-primary:not(.uk-preserve-color) .uk-input:-ms-input-placeholder, .uk-section-secondary:not(.uk-preserve-color) .uk-input:-ms-input-placeholder, .uk-tile-primary:not(.uk-preserve-color) .uk-input:-ms-input-placeholder, .uk-tile-secondary:not(.uk-preserve-color) .uk-input:-ms-input-placeholder, .uk-card-primary.uk-card-body .uk-input:-ms-input-placeholder, .uk-card-primary > :not([class*=uk-card-media]) .uk-input:-ms-input-placeholder, .uk-card-secondary.uk-card-body .uk-input:-ms-input-placeholder, .uk-card-secondary > :not([class*=uk-card-media]) .uk-input:-ms-input-placeholder, .uk-overlay-primary .uk-input:-ms-input-placeholder, .uk-offcanvas-bar .uk-input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-input::placeholder,
@@ -12720,15 +12789,15 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-input::placeholder,
 .uk-overlay-primary .uk-input::placeholder,
 .uk-offcanvas-bar .uk-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-textarea::-moz-placeholder, .uk-section-primary:not(.uk-preserve-color) .uk-textarea::-moz-placeholder, .uk-section-secondary:not(.uk-preserve-color) .uk-textarea::-moz-placeholder, .uk-tile-primary:not(.uk-preserve-color) .uk-textarea::-moz-placeholder, .uk-tile-secondary:not(.uk-preserve-color) .uk-textarea::-moz-placeholder, .uk-card-primary.uk-card-body .uk-textarea::-moz-placeholder, .uk-card-primary > :not([class*=uk-card-media]) .uk-textarea::-moz-placeholder, .uk-card-secondary.uk-card-body .uk-textarea::-moz-placeholder, .uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea::-moz-placeholder, .uk-overlay-primary .uk-textarea::-moz-placeholder, .uk-offcanvas-bar .uk-textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-textarea:-ms-input-placeholder, .uk-section-primary:not(.uk-preserve-color) .uk-textarea:-ms-input-placeholder, .uk-section-secondary:not(.uk-preserve-color) .uk-textarea:-ms-input-placeholder, .uk-tile-primary:not(.uk-preserve-color) .uk-textarea:-ms-input-placeholder, .uk-tile-secondary:not(.uk-preserve-color) .uk-textarea:-ms-input-placeholder, .uk-card-primary.uk-card-body .uk-textarea:-ms-input-placeholder, .uk-card-primary > :not([class*=uk-card-media]) .uk-textarea:-ms-input-placeholder, .uk-card-secondary.uk-card-body .uk-textarea:-ms-input-placeholder, .uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea:-ms-input-placeholder, .uk-overlay-primary .uk-textarea:-ms-input-placeholder, .uk-offcanvas-bar .uk-textarea:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-textarea::placeholder,
@@ -12742,7 +12811,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea::placeholder,
 .uk-overlay-primary .uk-textarea::placeholder,
 .uk-offcanvas-bar .uk-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-select:not([multiple]):not([size]),
@@ -12756,7 +12825,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-select:not([multiple]):not([size]),
 .uk-overlay-primary .uk-select:not([multiple]):not([size]),
 .uk-offcanvas-bar .uk-select:not([multiple]):not([size]) {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22rgba(255, 255, 255, 0.7)%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22rgba(255, 255, 255, 0.7)%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22rgba(252, 252, 252, 0.7)%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22rgba(252, 252, 252, 0.7)%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
 }
 
 .uk-light .uk-input[list]:hover,
@@ -12781,7 +12850,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-input[list]:focus,
 .uk-overlay-primary .uk-input[list]:focus,
 .uk-offcanvas-bar .uk-input[list]:focus {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22rgba(255, 255, 255, 0.7)%22%20points%3D%2212%2012%208%206%2016%206%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22rgba(252, 252, 252, 0.7)%22%20points%3D%2212%2012%208%206%2016%206%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
 }
 
 .uk-light .uk-radio,
@@ -12806,7 +12875,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-checkbox,
 .uk-overlay-primary .uk-checkbox,
 .uk-offcanvas-bar .uk-checkbox {
-  background-color: rgba(242, 242, 242, 0.1);
+  background-color: rgba(239, 239, 239, 0.1);
 }
 
 .uk-light .uk-radio:checked,
@@ -12842,7 +12911,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-checkbox:indeterminate,
 .uk-overlay-primary .uk-checkbox:indeterminate,
 .uk-offcanvas-bar .uk-checkbox:indeterminate {
-  background-color: #fff;
+  background-color: #fcfcfc;
 }
 
 .uk-light .uk-radio:checked:focus,
@@ -12878,7 +12947,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-checkbox:indeterminate:focus,
 .uk-overlay-primary .uk-checkbox:indeterminate:focus,
 .uk-offcanvas-bar .uk-checkbox:indeterminate:focus {
-  background-color: #e6e6e6;
+  background-color: #e3e3e3;
 }
 
 .uk-light .uk-radio:checked,
@@ -12934,7 +13003,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-form-icon,
 .uk-overlay-primary .uk-form-icon,
 .uk-offcanvas-bar .uk-form-icon {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-form-icon:hover,
@@ -12948,7 +13017,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-form-icon:hover,
 .uk-overlay-primary .uk-form-icon:hover,
 .uk-offcanvas-bar .uk-form-icon:hover {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-button-default,
@@ -12962,7 +13031,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-default,
 .uk-overlay-primary .uk-button-default,
 .uk-offcanvas-bar .uk-button-default {
-  background-color: #fff;
+  background-color: #fcfcfc;
   color: #666;
 }
 
@@ -12988,7 +13057,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-default:focus,
 .uk-overlay-primary .uk-button-default:focus,
 .uk-offcanvas-bar .uk-button-default:focus {
-  background-color: #f2f2f2;
+  background-color: #efefef;
   color: #666;
 }
 
@@ -13014,7 +13083,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-default.uk-active,
 .uk-overlay-primary .uk-button-default.uk-active,
 .uk-offcanvas-bar .uk-button-default.uk-active {
-  background-color: #e6e6e6;
+  background-color: #e3e3e3;
   color: #666;
 }
 
@@ -13029,7 +13098,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-primary,
 .uk-overlay-primary .uk-button-primary,
 .uk-offcanvas-bar .uk-button-primary {
-  background-color: #fff;
+  background-color: #fcfcfc;
   color: #666;
 }
 
@@ -13055,7 +13124,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-primary:focus,
 .uk-overlay-primary .uk-button-primary:focus,
 .uk-offcanvas-bar .uk-button-primary:focus {
-  background-color: #f2f2f2;
+  background-color: #efefef;
   color: #666;
 }
 
@@ -13081,7 +13150,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-primary.uk-active,
 .uk-overlay-primary .uk-button-primary.uk-active,
 .uk-offcanvas-bar .uk-button-primary.uk-active {
-  background-color: #e6e6e6;
+  background-color: #e3e3e3;
   color: #666;
 }
 
@@ -13096,7 +13165,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary,
 .uk-overlay-primary .uk-button-secondary,
 .uk-offcanvas-bar .uk-button-secondary {
-  background-color: #fff;
+  background-color: #fcfcfc;
   color: #666;
 }
 
@@ -13122,7 +13191,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary:focus,
 .uk-overlay-primary .uk-button-secondary:focus,
 .uk-offcanvas-bar .uk-button-secondary:focus {
-  background-color: #f2f2f2;
+  background-color: #efefef;
   color: #666;
 }
 
@@ -13148,7 +13217,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary.uk-active,
 .uk-overlay-primary .uk-button-secondary.uk-active,
 .uk-offcanvas-bar .uk-button-secondary.uk-active {
-  background-color: #e6e6e6;
+  background-color: #e3e3e3;
   color: #666;
 }
 
@@ -13163,7 +13232,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-text,
 .uk-overlay-primary .uk-button-text,
 .uk-offcanvas-bar .uk-button-text {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-button-text:hover,
@@ -13188,7 +13257,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-text:focus,
 .uk-overlay-primary .uk-button-text:focus,
 .uk-offcanvas-bar .uk-button-text:focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-button-text:disabled,
@@ -13202,7 +13271,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-text:disabled,
 .uk-overlay-primary .uk-button-text:disabled,
 .uk-offcanvas-bar .uk-button-text:disabled {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-button-link,
@@ -13216,7 +13285,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-link,
 .uk-overlay-primary .uk-button-link,
 .uk-offcanvas-bar .uk-button-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-button-link:hover,
@@ -13241,7 +13310,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-button-link:focus,
 .uk-overlay-primary .uk-button-link:focus,
 .uk-offcanvas-bar .uk-button-link:focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-grid-divider > :not(.uk-first-column)::before,
@@ -13255,7 +13324,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-grid-divider > :not(.uk-first-column)::before,
 .uk-overlay-primary .uk-grid-divider > :not(.uk-first-column)::before,
 .uk-offcanvas-bar .uk-grid-divider > :not(.uk-first-column)::before {
-  border-left-color: rgba(255, 255, 255, 0.2);
+  border-left-color: rgba(252, 252, 252, 0.2);
 }
 
 .uk-light .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before,
@@ -13269,7 +13338,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before,
 .uk-overlay-primary .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before,
 .uk-offcanvas-bar .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before {
-  border-top-color: rgba(255, 255, 255, 0.2);
+  border-top-color: rgba(252, 252, 252, 0.2);
 }
 
 .uk-light .uk-close,
@@ -13283,7 +13352,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-close,
 .uk-overlay-primary .uk-close,
 .uk-offcanvas-bar .uk-close {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-close:hover,
@@ -13308,7 +13377,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-close:focus,
 .uk-overlay-primary .uk-close:focus,
 .uk-offcanvas-bar .uk-close:focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-totop,
@@ -13322,7 +13391,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-totop,
 .uk-overlay-primary .uk-totop,
 .uk-offcanvas-bar .uk-totop {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-totop:hover,
@@ -13347,7 +13416,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-totop:focus,
 .uk-overlay-primary .uk-totop:focus,
 .uk-offcanvas-bar .uk-totop:focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-totop:active,
@@ -13361,7 +13430,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-totop:active,
 .uk-overlay-primary .uk-totop:active,
 .uk-offcanvas-bar .uk-totop:active {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light .uk-badge,
@@ -13375,7 +13444,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-badge,
 .uk-overlay-primary .uk-badge,
 .uk-offcanvas-bar .uk-badge {
-  background-color: #fff;
+  background-color: #fcfcfc;
   color: #666;
 }
 
@@ -13415,7 +13484,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-label,
 .uk-overlay-primary .uk-label,
 .uk-offcanvas-bar .uk-label {
-  background-color: #fff;
+  background-color: #fcfcfc;
   color: #666;
 }
 
@@ -13430,7 +13499,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-article-meta,
 .uk-overlay-primary .uk-article-meta,
 .uk-offcanvas-bar .uk-article-meta {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-search-input,
@@ -13444,7 +13513,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-search-input,
 .uk-overlay-primary .uk-search-input,
 .uk-offcanvas-bar .uk-search-input {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-search-input:-ms-input-placeholder,
@@ -13458,15 +13527,15 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-search-input:-ms-input-placeholder,
 .uk-overlay-primary .uk-search-input:-ms-input-placeholder,
 .uk-offcanvas-bar .uk-search-input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(252, 252, 252, 0.5) !important;
 }
 
 .uk-light .uk-search-input::-moz-placeholder, .uk-section-primary:not(.uk-preserve-color) .uk-search-input::-moz-placeholder, .uk-section-secondary:not(.uk-preserve-color) .uk-search-input::-moz-placeholder, .uk-tile-primary:not(.uk-preserve-color) .uk-search-input::-moz-placeholder, .uk-tile-secondary:not(.uk-preserve-color) .uk-search-input::-moz-placeholder, .uk-card-primary.uk-card-body .uk-search-input::-moz-placeholder, .uk-card-primary > :not([class*=uk-card-media]) .uk-search-input::-moz-placeholder, .uk-card-secondary.uk-card-body .uk-search-input::-moz-placeholder, .uk-card-secondary > :not([class*=uk-card-media]) .uk-search-input::-moz-placeholder, .uk-overlay-primary .uk-search-input::-moz-placeholder, .uk-offcanvas-bar .uk-search-input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-search-input:-ms-input-placeholder, .uk-section-primary:not(.uk-preserve-color) .uk-search-input:-ms-input-placeholder, .uk-section-secondary:not(.uk-preserve-color) .uk-search-input:-ms-input-placeholder, .uk-tile-primary:not(.uk-preserve-color) .uk-search-input:-ms-input-placeholder, .uk-tile-secondary:not(.uk-preserve-color) .uk-search-input:-ms-input-placeholder, .uk-card-primary.uk-card-body .uk-search-input:-ms-input-placeholder, .uk-card-primary > :not([class*=uk-card-media]) .uk-search-input:-ms-input-placeholder, .uk-card-secondary.uk-card-body .uk-search-input:-ms-input-placeholder, .uk-card-secondary > :not([class*=uk-card-media]) .uk-search-input:-ms-input-placeholder, .uk-overlay-primary .uk-search-input:-ms-input-placeholder, .uk-offcanvas-bar .uk-search-input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-search-input::placeholder,
@@ -13480,7 +13549,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-search-input::placeholder,
 .uk-overlay-primary .uk-search-input::placeholder,
 .uk-offcanvas-bar .uk-search-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-search .uk-search-icon,
@@ -13494,7 +13563,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-search .uk-search-icon,
 .uk-overlay-primary .uk-search .uk-search-icon,
 .uk-offcanvas-bar .uk-search .uk-search-icon {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-search .uk-search-icon:hover,
@@ -13508,7 +13577,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-search .uk-search-icon:hover,
 .uk-overlay-primary .uk-search .uk-search-icon:hover,
 .uk-offcanvas-bar .uk-search .uk-search-icon:hover {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-search-default .uk-search-input,
@@ -13522,7 +13591,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-search-default .uk-search-input,
 .uk-overlay-primary .uk-search-default .uk-search-input,
 .uk-offcanvas-bar .uk-search-default .uk-search-input {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(252, 252, 252, 0.1);
 }
 
 .uk-light .uk-search-default .uk-search-input:focus,
@@ -13536,7 +13605,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-search-default .uk-search-input:focus,
 .uk-overlay-primary .uk-search-default .uk-search-input:focus,
 .uk-offcanvas-bar .uk-search-default .uk-search-input:focus {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(252, 252, 252, 0.1);
 }
 
 .uk-light .uk-search-navbar .uk-search-input,
@@ -13578,7 +13647,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-search-toggle,
 .uk-overlay-primary .uk-search-toggle,
 .uk-offcanvas-bar .uk-search-toggle {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-search-toggle:hover,
@@ -13603,7 +13672,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-search-toggle:focus,
 .uk-overlay-primary .uk-search-toggle:focus,
 .uk-offcanvas-bar .uk-search-toggle:focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-nav-parent-icon > .uk-parent > a::after,
@@ -13617,7 +13686,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-parent-icon > .uk-parent > a::after,
 .uk-overlay-primary .uk-nav-parent-icon > .uk-parent > a::after,
 .uk-offcanvas-bar .uk-nav-parent-icon > .uk-parent > a::after {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22rgba(255, 255, 255, 0.7)%22%20stroke-width%3D%221.1%22%20points%3D%2210%201%204%207%2010%2013%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22rgba(252, 252, 252, 0.7)%22%20stroke-width%3D%221.1%22%20points%3D%2210%201%204%207%2010%2013%22%20%2F%3E%0A%3C%2Fsvg%3E");
 }
 
 .uk-light .uk-nav-parent-icon > .uk-parent.uk-open > a::after,
@@ -13631,7 +13700,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-parent-icon > .uk-parent.uk-open > a::after,
 .uk-overlay-primary .uk-nav-parent-icon > .uk-parent.uk-open > a::after,
 .uk-offcanvas-bar .uk-nav-parent-icon > .uk-parent.uk-open > a::after {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22rgba(255, 255, 255, 0.7)%22%20stroke-width%3D%221.1%22%20points%3D%221%204%207%2010%2013%204%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22rgba(252, 252, 252, 0.7)%22%20stroke-width%3D%221.1%22%20points%3D%221%204%207%2010%2013%204%22%20%2F%3E%0A%3C%2Fsvg%3E");
 }
 
 .uk-light .uk-nav-default > li > a,
@@ -13645,7 +13714,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default > li > a,
 .uk-overlay-primary .uk-nav-default > li > a,
 .uk-offcanvas-bar .uk-nav-default > li > a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-nav-default > li > a:hover,
@@ -13670,7 +13739,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default > li > a:focus,
 .uk-overlay-primary .uk-nav-default > li > a:focus,
 .uk-offcanvas-bar .uk-nav-default > li > a:focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-nav-default > li.uk-active > a,
@@ -13684,7 +13753,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default > li.uk-active > a,
 .uk-overlay-primary .uk-nav-default > li.uk-active > a,
 .uk-offcanvas-bar .uk-nav-default > li.uk-active > a {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light .uk-nav-default .uk-nav-header,
@@ -13698,7 +13767,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-header,
 .uk-overlay-primary .uk-nav-default .uk-nav-header,
 .uk-offcanvas-bar .uk-nav-default .uk-nav-header {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light .uk-nav-default .uk-nav-divider,
@@ -13712,7 +13781,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-divider,
 .uk-overlay-primary .uk-nav-default .uk-nav-divider,
 .uk-offcanvas-bar .uk-nav-default .uk-nav-divider {
-  border-top-color: rgba(255, 255, 255, 0.2);
+  border-top-color: rgba(252, 252, 252, 0.2);
 }
 
 .uk-light .uk-nav-default .uk-nav-sub a,
@@ -13726,7 +13795,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-sub a,
 .uk-overlay-primary .uk-nav-default .uk-nav-sub a,
 .uk-offcanvas-bar .uk-nav-default .uk-nav-sub a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-nav-default .uk-nav-sub a:hover,
@@ -13751,7 +13820,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-sub a:focus,
 .uk-overlay-primary .uk-nav-default .uk-nav-sub a:focus,
 .uk-offcanvas-bar .uk-nav-default .uk-nav-sub a:focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-nav-default .uk-nav-sub li.uk-active > a,
@@ -13765,7 +13834,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-sub li.uk-active > a,
 .uk-overlay-primary .uk-nav-default .uk-nav-sub li.uk-active > a,
 .uk-offcanvas-bar .uk-nav-default .uk-nav-sub li.uk-active > a {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light .uk-nav-primary > li > a,
@@ -13779,7 +13848,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary > li > a,
 .uk-overlay-primary .uk-nav-primary > li > a,
 .uk-offcanvas-bar .uk-nav-primary > li > a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-nav-primary > li > a:hover,
@@ -13804,7 +13873,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary > li > a:focus,
 .uk-overlay-primary .uk-nav-primary > li > a:focus,
 .uk-offcanvas-bar .uk-nav-primary > li > a:focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-nav-primary > li.uk-active > a,
@@ -13818,7 +13887,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary > li.uk-active > a,
 .uk-overlay-primary .uk-nav-primary > li.uk-active > a,
 .uk-offcanvas-bar .uk-nav-primary > li.uk-active > a {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light .uk-nav-primary .uk-nav-header,
@@ -13832,7 +13901,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-header,
 .uk-overlay-primary .uk-nav-primary .uk-nav-header,
 .uk-offcanvas-bar .uk-nav-primary .uk-nav-header {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light .uk-nav-primary .uk-nav-divider,
@@ -13846,7 +13915,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-divider,
 .uk-overlay-primary .uk-nav-primary .uk-nav-divider,
 .uk-offcanvas-bar .uk-nav-primary .uk-nav-divider {
-  border-top-color: rgba(255, 255, 255, 0.2);
+  border-top-color: rgba(252, 252, 252, 0.2);
 }
 
 .uk-light .uk-nav-primary .uk-nav-sub a,
@@ -13860,7 +13929,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-sub a,
 .uk-overlay-primary .uk-nav-primary .uk-nav-sub a,
 .uk-offcanvas-bar .uk-nav-primary .uk-nav-sub a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-nav-primary .uk-nav-sub a:hover,
@@ -13885,7 +13954,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-sub a:focus,
 .uk-overlay-primary .uk-nav-primary .uk-nav-sub a:focus,
 .uk-offcanvas-bar .uk-nav-primary .uk-nav-sub a:focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-nav-primary .uk-nav-sub li.uk-active > a,
@@ -13899,7 +13968,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-sub li.uk-active > a,
 .uk-overlay-primary .uk-nav-primary .uk-nav-sub li.uk-active > a,
 .uk-offcanvas-bar .uk-nav-primary .uk-nav-sub li.uk-active > a {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light .uk-navbar-nav > li > a,
@@ -13913,7 +13982,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-navbar-nav > li > a,
 .uk-overlay-primary .uk-navbar-nav > li > a,
 .uk-offcanvas-bar .uk-navbar-nav > li > a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-navbar-nav > li:hover > a,
@@ -13949,7 +14018,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-navbar-nav > li > a.uk-open,
 .uk-overlay-primary .uk-navbar-nav > li > a.uk-open,
 .uk-offcanvas-bar .uk-navbar-nav > li > a.uk-open {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-navbar-nav > li > a:active,
@@ -13963,7 +14032,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-navbar-nav > li > a:active,
 .uk-overlay-primary .uk-navbar-nav > li > a:active,
 .uk-offcanvas-bar .uk-navbar-nav > li > a:active {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light .uk-navbar-nav > li.uk-active > a,
@@ -13977,7 +14046,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-navbar-nav > li.uk-active > a,
 .uk-overlay-primary .uk-navbar-nav > li.uk-active > a,
 .uk-offcanvas-bar .uk-navbar-nav > li.uk-active > a {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light .uk-navbar-item,
@@ -13991,7 +14060,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-navbar-item,
 .uk-overlay-primary .uk-navbar-item,
 .uk-offcanvas-bar .uk-navbar-item {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-navbar-toggle,
@@ -14005,7 +14074,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-navbar-toggle,
 .uk-overlay-primary .uk-navbar-toggle,
 .uk-offcanvas-bar .uk-navbar-toggle {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-navbar-toggle:hover,
@@ -14041,7 +14110,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-navbar-toggle.uk-open,
 .uk-overlay-primary .uk-navbar-toggle.uk-open,
 .uk-offcanvas-bar .uk-navbar-toggle.uk-open {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-subnav > * > :first-child,
@@ -14055,7 +14124,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-subnav > * > :first-child,
 .uk-overlay-primary .uk-subnav > * > :first-child,
 .uk-offcanvas-bar .uk-subnav > * > :first-child {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-subnav > * > a:hover,
@@ -14080,7 +14149,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-subnav > * > a:focus,
 .uk-overlay-primary .uk-subnav > * > a:focus,
 .uk-offcanvas-bar .uk-subnav > * > a:focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-subnav > .uk-active > a,
@@ -14094,7 +14163,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-subnav > .uk-active > a,
 .uk-overlay-primary .uk-subnav > .uk-active > a,
 .uk-offcanvas-bar .uk-subnav > .uk-active > a {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light .uk-subnav-divider > :nth-child(n+2):not(.uk-first-column)::before,
@@ -14108,7 +14177,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-subnav-divider > :nth-child(n+2):not(.uk-first-column)::before,
 .uk-overlay-primary .uk-subnav-divider > :nth-child(n+2):not(.uk-first-column)::before,
 .uk-offcanvas-bar .uk-subnav-divider > :nth-child(n+2):not(.uk-first-column)::before {
-  border-left-color: rgba(255, 255, 255, 0.2);
+  border-left-color: rgba(252, 252, 252, 0.2);
 }
 
 .uk-light .uk-subnav-pill > * > :first-child,
@@ -14123,7 +14192,7 @@ iframe.uk-cover {
 .uk-overlay-primary .uk-subnav-pill > * > :first-child,
 .uk-offcanvas-bar .uk-subnav-pill > * > :first-child {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-subnav-pill > * > a:hover,
@@ -14148,8 +14217,8 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-subnav-pill > * > a:focus,
 .uk-overlay-primary .uk-subnav-pill > * > a:focus,
 .uk-offcanvas-bar .uk-subnav-pill > * > a:focus {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(252, 252, 252, 0.1);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-subnav-pill > * > a:active,
@@ -14163,8 +14232,8 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-subnav-pill > * > a:active,
 .uk-overlay-primary .uk-subnav-pill > * > a:active,
 .uk-offcanvas-bar .uk-subnav-pill > * > a:active {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(252, 252, 252, 0.1);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-subnav-pill > .uk-active > a,
@@ -14178,7 +14247,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-subnav-pill > .uk-active > a,
 .uk-overlay-primary .uk-subnav-pill > .uk-active > a,
 .uk-offcanvas-bar .uk-subnav-pill > .uk-active > a {
-  background-color: #fff;
+  background-color: #fcfcfc;
   color: #666;
 }
 
@@ -14193,7 +14262,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-subnav > .uk-disabled > a,
 .uk-overlay-primary .uk-subnav > .uk-disabled > a,
 .uk-offcanvas-bar .uk-subnav > .uk-disabled > a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-breadcrumb > * > *,
@@ -14207,7 +14276,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-breadcrumb > * > *,
 .uk-overlay-primary .uk-breadcrumb > * > *,
 .uk-offcanvas-bar .uk-breadcrumb > * > * {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-breadcrumb > * > :hover,
@@ -14232,7 +14301,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-breadcrumb > * > :focus,
 .uk-overlay-primary .uk-breadcrumb > * > :focus,
 .uk-offcanvas-bar .uk-breadcrumb > * > :focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-breadcrumb > :last-child > *,
@@ -14246,7 +14315,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-breadcrumb > :last-child > *,
 .uk-overlay-primary .uk-breadcrumb > :last-child > *,
 .uk-offcanvas-bar .uk-breadcrumb > :last-child > * {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-breadcrumb > :nth-child(n+2):not(.uk-first-column)::before,
@@ -14260,7 +14329,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-breadcrumb > :nth-child(n+2):not(.uk-first-column)::before,
 .uk-overlay-primary .uk-breadcrumb > :nth-child(n+2):not(.uk-first-column)::before,
 .uk-offcanvas-bar .uk-breadcrumb > :nth-child(n+2):not(.uk-first-column)::before {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-pagination > * > *,
@@ -14274,7 +14343,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-pagination > * > *,
 .uk-overlay-primary .uk-pagination > * > *,
 .uk-offcanvas-bar .uk-pagination > * > * {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-pagination > * > :hover,
@@ -14299,7 +14368,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-pagination > * > :focus,
 .uk-overlay-primary .uk-pagination > * > :focus,
 .uk-offcanvas-bar .uk-pagination > * > :focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-pagination > .uk-active > *,
@@ -14313,7 +14382,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-pagination > .uk-active > *,
 .uk-overlay-primary .uk-pagination > .uk-active > *,
 .uk-offcanvas-bar .uk-pagination > .uk-active > * {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-pagination > .uk-disabled > *,
@@ -14327,7 +14396,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-pagination > .uk-disabled > *,
 .uk-overlay-primary .uk-pagination > .uk-disabled > *,
 .uk-offcanvas-bar .uk-pagination > .uk-disabled > * {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-tab > * > a,
@@ -14341,7 +14410,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-tab > * > a,
 .uk-overlay-primary .uk-tab > * > a,
 .uk-offcanvas-bar .uk-tab > * > a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-tab > * > a:hover,
@@ -14366,7 +14435,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-tab > * > a:focus,
 .uk-overlay-primary .uk-tab > * > a:focus,
 .uk-offcanvas-bar .uk-tab > * > a:focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-tab > .uk-active > a,
@@ -14380,7 +14449,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-tab > .uk-active > a,
 .uk-overlay-primary .uk-tab > .uk-active > a,
 .uk-offcanvas-bar .uk-tab > .uk-active > a {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light .uk-tab > .uk-disabled > a,
@@ -14394,7 +14463,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-tab > .uk-disabled > a,
 .uk-overlay-primary .uk-tab > .uk-disabled > a,
 .uk-offcanvas-bar .uk-tab > .uk-disabled > a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-slidenav,
@@ -14408,7 +14477,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-slidenav,
 .uk-overlay-primary .uk-slidenav,
 .uk-offcanvas-bar .uk-slidenav {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-slidenav:hover,
@@ -14433,7 +14502,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-slidenav:focus,
 .uk-overlay-primary .uk-slidenav:focus,
 .uk-offcanvas-bar .uk-slidenav:focus {
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(252, 252, 252, 0.95);
 }
 
 .uk-light .uk-slidenav:active,
@@ -14447,7 +14516,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-slidenav:active,
 .uk-overlay-primary .uk-slidenav:active,
 .uk-offcanvas-bar .uk-slidenav:active {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-dotnav > * > *,
@@ -14461,7 +14530,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-dotnav > * > *,
 .uk-overlay-primary .uk-dotnav > * > *,
 .uk-offcanvas-bar .uk-dotnav > * > * {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-dotnav > * > :hover,
@@ -14486,7 +14555,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-dotnav > * > :focus,
 .uk-overlay-primary .uk-dotnav > * > :focus,
 .uk-offcanvas-bar .uk-dotnav > * > :focus {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(252, 252, 252, 0.9);
 }
 
 .uk-light .uk-dotnav > * > :active,
@@ -14500,7 +14569,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-dotnav > * > :active,
 .uk-overlay-primary .uk-dotnav > * > :active,
 .uk-offcanvas-bar .uk-dotnav > * > :active {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-dotnav > .uk-active > *,
@@ -14514,7 +14583,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-dotnav > .uk-active > *,
 .uk-overlay-primary .uk-dotnav > .uk-active > *,
 .uk-offcanvas-bar .uk-dotnav > .uk-active > * {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(252, 252, 252, 0.9);
 }
 
 .uk-light .uk-accordion-title,
@@ -14528,7 +14597,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-accordion-title,
 .uk-overlay-primary .uk-accordion-title,
 .uk-offcanvas-bar .uk-accordion-title {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .uk-light .uk-accordion-title:hover,
@@ -14553,7 +14622,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-accordion-title:focus,
 .uk-overlay-primary .uk-accordion-title:focus,
 .uk-offcanvas-bar .uk-accordion-title:focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-iconnav > * > a,
@@ -14567,7 +14636,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-iconnav > * > a,
 .uk-overlay-primary .uk-iconnav > * > a,
 .uk-offcanvas-bar .uk-iconnav > * > a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-iconnav > * > a:hover,
@@ -14592,7 +14661,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-iconnav > * > a:focus,
 .uk-overlay-primary .uk-iconnav > * > a:focus,
 .uk-offcanvas-bar .uk-iconnav > * > a:focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-iconnav > .uk-active > a,
@@ -14606,7 +14675,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-iconnav > .uk-active > a,
 .uk-overlay-primary .uk-iconnav > .uk-active > a,
 .uk-offcanvas-bar .uk-iconnav > .uk-active > a {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-text-lead,
@@ -14620,7 +14689,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-text-lead,
 .uk-overlay-primary .uk-text-lead,
 .uk-offcanvas-bar .uk-text-lead {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-text-meta,
@@ -14634,7 +14703,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-text-meta,
 .uk-overlay-primary .uk-text-meta,
 .uk-offcanvas-bar .uk-text-meta {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(252, 252, 252, 0.5);
 }
 
 .uk-light .uk-text-muted,
@@ -14648,7 +14717,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-text-muted,
 .uk-overlay-primary .uk-text-muted,
 .uk-offcanvas-bar .uk-text-muted {
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(252, 252, 252, 0.5) !important;
 }
 
 .uk-light .uk-text-emphasis,
@@ -14662,7 +14731,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-text-emphasis,
 .uk-overlay-primary .uk-text-emphasis,
 .uk-offcanvas-bar .uk-text-emphasis {
-  color: #fff !important;
+  color: #fcfcfc !important;
 }
 
 .uk-light .uk-text-primary,
@@ -14676,7 +14745,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-text-primary,
 .uk-overlay-primary .uk-text-primary,
 .uk-offcanvas-bar .uk-text-primary {
-  color: #fff !important;
+  color: #fcfcfc !important;
 }
 
 .uk-light .uk-text-secondary,
@@ -14690,7 +14759,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-text-secondary,
 .uk-overlay-primary .uk-text-secondary,
 .uk-offcanvas-bar .uk-text-secondary {
-  color: #fff !important;
+  color: #fcfcfc !important;
 }
 
 .uk-light .uk-column-divider,
@@ -14704,8 +14773,8 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-column-divider,
 .uk-overlay-primary .uk-column-divider,
 .uk-offcanvas-bar .uk-column-divider {
-  -moz-column-rule-color: rgba(255, 255, 255, 0.2);
-       column-rule-color: rgba(255, 255, 255, 0.2);
+  -moz-column-rule-color: rgba(252, 252, 252, 0.2);
+       column-rule-color: rgba(252, 252, 252, 0.2);
 }
 
 .uk-light .uk-logo,
@@ -14719,7 +14788,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-logo,
 .uk-overlay-primary .uk-logo,
 .uk-offcanvas-bar .uk-logo {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-logo:hover,
@@ -14744,7 +14813,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-logo:focus,
 .uk-overlay-primary .uk-logo:focus,
 .uk-offcanvas-bar .uk-logo:focus {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(252, 252, 252, 0.7);
 }
 
 .uk-light .uk-logo > :not(.uk-logo-inverse):not(:only-of-type),
