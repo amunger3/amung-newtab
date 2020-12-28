@@ -50,20 +50,6 @@
     }
 }
 
-/* body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    color: var(--gray-text);
-    background-color: #fff;
-} */
-
-/* header {
-    padding: 0 20px;
-    height: 64px;
-    line-height: 64px;
-    background: var(--gray-light);
-} */
-
 main {
     display: flex;
     box-sizing: border-box;
@@ -86,38 +72,6 @@ aside {
 aside>div {
     margin-left: 20px;
 }
-
-h1 {
-    margin: 0;
-    padding-left: 80px;
-    background: url('../img/uicon.svg') no-repeat;
-    background-size: 54px auto;
-    background-position: 0 6px;
-}
-
-/* h2 {
-    font-size: 20px;
-}
-
-h2:first-child {
-    margin-top: 0;
-} */
-
-/* a {
-    color: var(--color-purple-light);
-    text-decoration: none;
-    transition: color ease 250ms;
-}
-
-a:not(.button):hover {
-    color: var(--color-purple-dark);
-} */
-
-/* .grey-bg {
-    box-sizing: border-box;
-    padding: 20px;
-    background: var(--gray-light);
-} */
 
 .hidden {
     display: none;
@@ -143,6 +97,33 @@ a:not(.button):hover {
     background: var(--color-purple-dark);
 }
 
+.info-icon {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    color: var(--gray-dark);
+}
+
+.info-icon::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background: url('../img/info.svg') center center / 18px 18px no-repeat transparent;
+}
+
+.uk-logo {
+    margin: 0;
+    padding-left: 80px;
+    background: url('../img/uicon.svg') no-repeat;
+    background-size: 54px auto;
+    background-position: 0 6px;
+    width: 54px;
+}
+
+
 /* footer {
     position: fixed;
     bottom: 0;
@@ -163,20 +144,3 @@ footer a {
     background-position: center left;
     color: var(--gray-text);
 } */
-
-.info-icon {
-    position: relative;
-    margin-bottom: 15px;
-    padding-left: 30px;
-    color: var(--gray-dark);
-}
-
-.info-icon::before {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 0;
-    width: 18px;
-    height: 18px;
-    background: url('../img/info.svg') center center / 18px 18px no-repeat transparent;
-}

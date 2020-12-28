@@ -1,5 +1,13 @@
 {
     "/src/js/app.js": "/src/js/app.js",
     "/src/css/app.css": "/src/css/app.css",
+    "/src/sass/uikit/mixins-theme.scss": "/src/sass/uikit/mixins-theme.scss",
+    "/src/sass/uikit/mixins.scss": "/src/sass/uikit/mixins.scss",
+    "/src/sass/uikit/uikit-theme.scss": "/src/sass/uikit/uikit-theme.scss",
+    "/src/sass/uikit/uikit.scss": "/src/sass/uikit/uikit.scss",
+    "/src/sass/uikit/variables-theme.scss": "/src/sass/uikit/variables-theme.scss",
+    "/src/sass/uikit/variables.scss": "/src/sass/uikit/variables.scss",
+    "/src/js/uikit/uikit-core.js": "/src/js/uikit/uikit-core.js",
+    "/src/js/uikit/uikit.js": "/src/js/uikit/uikit.js",
     "/src/js/vendor/jquery.js": "/src/js/vendor/jquery.js"
 }

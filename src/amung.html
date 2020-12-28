@@ -1,233 +1,244 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+    <head>
 
-    <!-- Metas -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AMung — NewTab</title>
-    <link rel="shortcut icon" type="image/svg+xml" href="img/uicon.svg">
+        <!-- Metas -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AMung — NewTab</title>
+        <link rel="shortcut icon" type="image/svg+xml" href="img/uicon.svg">
 
-    <!-- JavaScript -->
-    <script>
-        document.getElementsByTagName("html")[0].className += " js";
-    </script>
+        <!-- JavaScript -->
+        <script>
+            document.getElementsByTagName("html")[0].className += " js";
+        </script>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/app.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/app.css">
 
-</head>
+    </head>
 
 
-<body>
+    <body>
 
-    <div class="uk-container uk-background-default">
+        <div class="uk-container uk-background-default">
 
-        <!-- Header & Navbar -->
-        <nav class="uk-navbar-container uk-navbar-transparent uk-margin" uk-navbar>
-            <div class="uk-navbar-left">
-                <h1 class="uk-heading uk-margin-small-top">AMung — NewTab</h1>
-            </div>
-            <div class="uk-navbar-right">
-                <span class="uk-text-emphasis uk-text-left">Toggle Dark Mode:</span>
-                <input id="theme-switch" class="uk-checkbox" type="checkbox" uk-toggle="target: +; cls: uk-alert-success">
-                <p class="uk-alert">Toggle-Target</p>
-            </div>
-        </nav>
-
-        <!-- Main Content Grid -->
-        <div uk-grid>
-
-            <div class="uk-width-1-3@s uk-width-1-3@m">
-                <div class="uk-card uk-card-default uk-box-shadow-medium">
-                    <ul class="uk-nav uk-nav-default uk-nav-primary uk-nav-parent-icon uk-padding-small" uk-nav="multiple: true">
-                        <li class="uk-active"><a href="./amung.html">NewTab</a></li>
-
-                        <li class="uk-parent">
-                            <a href="#"> &NonBreakingSpace; <span uk-icon="icon: happy"></span> &NonBreakingSpace; <span>Football Links</span></a>
-                            <ul class="uk-nav-sub">
-                                <li><a href="https://encycolorpedia.com/teams/football">Encycolorpedia: Football Teams</a></li>
-                                <li><a href="https://www.espn.com/watch/collections/19502/latest-series">ESPN FC</a></li>
-                                <li><a href="https://www.football-data.org/documentation/quickstart">Football-Data API Docs</a></li>
-                                <li><a href="https://fs-mir-pro.herokuapp.com/">FS-App Elo Ratings</a></li>
-                                <li><a href="https://www.fullmatchesandshows.com/">FullMatchesAndShows</a></li>
-                                <li><a href="https://www.sofascore.com/">SofaScore</a></li>
-                                <li><a href="https://sofifa.com/?layout=old">SoFIFA</a></li>
-                                <li><a href="https://www.transfermarkt.us/">TransferMarkt</a></li>
-                                <li><a href="https://www.whoscored.com/">WhoScored</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="uk-parent">
-                            <a href="#"> &NonBreakingSpace; <span uk-icon="icon: github"></span> &NonBreakingSpace; <span>GitHub</span></a>
-                            <ul class="uk-nav-sub">
-                                <li><a href="https://github.com/amunger3">Profile</a></li>
-                                <li><a href="https://amunger3.github.io">GitHub Pages</a></li>
-                                <li><a href="https://github.com/amunger3?tab=repositories">Repositories</a></li>
-                                <li><a href="https://github.com/amunger3?tab=stars">Stars</a></li>
-                                <li><a href="https://gist.github.com/mine">Gists</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="uk-parent">
-                            <a href="#"> &NonBreakingSpace; <span uk-icon="icon: laptop"></span> &NonBreakingSpace; <span>LocalHost Ports</span></a>
-                            <ul class="uk-nav-sub">
-                                <li><a class="uk-link" href="http://localhost:80">80 (Ubuntu::Apache2)</a></li>
-                                <li><a class="uk-link" href="http://localhost:4000">4000 (PHP::Laravel)</a></li>
-                                <li><a class="uk-link" href="http://localhost:5000">5000 (Python::Flask)</a></li>
-                                <li><a class="uk-link" href="http://localhost:8000">8000 (Python/PHP)</a></li>
-                                <li><a class="uk-link" href="http://localhost:8050">8050 (Python::Dash)</a></li>
-                                <li><a class="uk-link" href="http://localhost:8181">8181 (Ruby::serve)</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="uk-parent">
-                            <a href="#"> &NonBreakingSpace; <span uk-icon="icon: server"></span> &NonBreakingSpace; <span>Ubuntu Server</span></a>
-                            <ul class="uk-nav-sub">
-                                <li><a href="http://70.32.24.16">Index</a></li>
-                                <li><a href="https://solusvm2.a2hosting.com:5656/home.php">Admin</a></li>
-                            </ul>
-                        </li>
-
-                    </ul>
+            <!-- Header & Navbar -->
+            <nav class="uk-navbar-container uk-navbar-transparent uk-margin" uk-navbar>
+                <div class="uk-navbar-left">
+                    <a class="uk-navbar-item uk-logo" href=""></a>
+                    <h2 class="uk-heading uk-margin-small-top uk-padding-small">New-Tab</h2>
                 </div>
+                <div class="uk-navbar-right">
+                    <input id="theme-switch" class="uk-checkbox" type="checkbox" uk-toggle="target: #toggle; cls: uk-alert-success">
+                    <span id="toggle" class="uk-alert">Toggle</span>
+                </div>
+            </nav>
+
+            <!-- Main Content Grid -->
+            <div uk-grid>
+
+                <div class="uk-width-1-3@s uk-width-1-3@m">
+                    <div class="uk-card uk-card-default uk-box-shadow-medium">
+                        <ul class="uk-nav uk-nav-default uk-nav-primary uk-nav-parent-icon uk-padding-small" uk-nav="multiple: true">
+                            <li class="uk-active"><a href="./amung.html">Menu</a></li>
+
+                            <li class="uk-parent">
+                                <a href="#"> &NonBreakingSpace; <span uk-icon="icon: happy"></span> &NonBreakingSpace; <span>Football Links</span></a>
+                                <ul class="uk-nav-sub">
+                                    <li><a href="https://encycolorpedia.com/teams/football">Encycolorpedia: Football Teams</a></li>
+                                    <li><a href="https://www.espn.com/watch/collections/19502/latest-series">ESPN FC</a></li>
+                                    <li><a href="https://www.football-data.org/documentation/quickstart">Football-Data API Docs</a></li>
+                                    <li><a href="https://fs-mir-pro.herokuapp.com/">FS-App Elo Ratings</a></li>
+                                    <li><a href="https://www.fullmatchesandshows.com/">FullMatchesAndShows</a></li>
+                                    <li><a href="https://www.sofascore.com/">SofaScore</a></li>
+                                    <li><a href="https://sofifa.com/players">SoFIFA</a></li>
+                                    <li><a href="https://www.transfermarkt.us/">TransferMarkt</a></li>
+                                    <li><a href="https://understat.com/">UnderStat</a></li>
+                                    <li><a href="https://www.whoscored.com/">WhoScored</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="uk-parent">
+                                <a href="#"> &NonBreakingSpace; <span uk-icon="icon: github"></span> &NonBreakingSpace; <span>GitHub</span></a>
+                                <ul class="uk-nav-sub">
+                                    <li><a href="https://github.com/amunger3">Profile</a></li>
+                                    <li><a href="https://amunger3.github.io">GitHub Pages</a></li>
+                                    <li><a href="https://github.com/amunger3?tab=repositories">Repositories</a></li>
+                                    <li><a href="https://github.com/amunger3?tab=stars">Stars</a></li>
+                                    <li><a href="https://gist.github.com/mine">Gists</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="uk-parent">
+                                <a href="#"> &NonBreakingSpace; <span uk-icon="icon: laptop"></span> &NonBreakingSpace; <span>LocalHost Ports</span></a>
+                                <ul class="uk-nav-sub">
+                                    <li><a class="uk-link" href="http://localhost:8282">Ubuntu::Apache2</a></li>
+                                    <li><a class="uk-link" href="http://localhost:50080">Windows::DevicePortal (localhost)</a></li>
+                                    <li><a class="uk-link" href="http://192.168.1.223:50080">Windows::DevicePortal (Wi-Fi)</a></li>
+                                    <li><a class="uk-link" href="http://172.28.32.1:50080">Windows::DevicePortal (WSL)</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="uk-parent">
+                                <a href="#"> &NonBreakingSpace; <span uk-icon="icon: server"></span> &NonBreakingSpace; <span>Ubuntu Server</span></a>
+                                <ul class="uk-nav-sub">
+                                    <li><a href="http://70.32.24.16">Index</a></li>
+                                    <li><a href="https://solusvm2.a2hosting.com:5656/home.php">Admin</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="uk-width-2-3@s uk-width-2-3@m">
+                    <h3 class="uk-heading-line">References & Documentation</h3>
+
+                    <div uk-filter="target: .js-filter">
+
+                        <div class="uk-grid-small uk-grid-divider" uk-grid>
+                            <div class="uk-width-1-2@m">
+                                <h5>Language</h5>
+                                <ul class="uk-subnav uk-subnav-pill" uk-margin>
+                                    <li uk-filter-control="filter: [data-lang='cli']; group: data-lang"><a href="#">CLI</a></li>
+                                    <li uk-filter-control="filter: [data-lang='css']; group: data-lang"><a href="#">CSS</a></li>
+                                    <li uk-filter-control="filter: [data-lang='js']; group: data-lang"><a href="#">JavaScript</a></li>
+                                    <li uk-filter-control="filter: [data-lang='node']; group: data-lang"><a href="#">NodeJS</a></li>
+                                    <li uk-filter-control="filter: [data-lang='php']; group: data-lang"><a href="#">PHP</a></li>
+                                    <li uk-filter-control="filter: [data-lang='py']; group: data-lang"><a href="#">Python</a></li>
+                                    <li uk-filter-control="filter: [data-lang='tex']; group: data-lang"><a href="#">LaTeX</a></li>
+                                </ul>
+                            </div>
+                            <div class="uk-width-1-2@m">
+                                <h5>Topic</h5>
+                                <ul class="uk-subnav uk-subnav-pill" uk-margin>
+                                    <li uk-filter-control="filter: [data-topic='webdev']; group: topic"><a href="#">WebDev</a></li>
+                                    <li uk-filter-control="filter: [data-topic='pkg']; group: topic"><a href="#">Packages</a></li>
+                                    <li uk-filter-control="filter: [data-topic='sys']; group: topic"><a href="#">System</a></li>
+                                </ul>
+                            </div>
+                            <div class="uk-width-1-1@m">
+                                <ul class="uk-subnav uk-subnav-pill" uk-margin>
+                                    <li class="uk-active" uk-filter-control><a href="#">All</a></li>
+                                    <li class="uk-active uk-hidden" uk-filter-control="sort: data-lang"><a href="#">Sorted</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <ul id="refCards" class="js-filter uk-child-width-1-2 uk-child-width-1-3@m uk-text-center" uk-grid>
+                            <li data-lang="tex" data-topic="webdev">
+                                <a href="https://arachnoid.com/lutusp/siteindex.html" class="uk-card uk-card-default uk-card-body uk-card-hover uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">Arachnoid</h4>
+                                </a>
+                            </li>
+                            <li data-lang="js" data-topic="webdev">
+                                <a href="http://docs.mathjax.org/en/latest/index.html" class="uk-card uk-card-default uk-card-body uk-card-hover uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">MathJax Docs</h4>
+                                </a>
+                            </li>
+                            <li data-lang="py" data-topic="sys">
+                                <a href="https://realpython.com" class="uk-card uk-card-default uk-card-body uk-card-hover uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">RealPython</h4>
+                                </a>
+                            </li>
+                            <li data-lang="php" data-topic="webdev">
+                                <a href="https://laracasts.com" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">LaraCasts</h4>
+                                </a>
+                            </li>
+                            <li data-lang="css" data-topic="webdev">
+                                <a href="https://getuikit.com/docs" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">UIKit</h4>
+                                </a>
+                            </li>
+                            <li data-lang="py" data-topic="webdev">
+                                <a href="https://flask.palletsprojects.com" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">Flask</h4>
+                                </a>
+                            </li>
+                            <li data-lang="cli" data-topic="pkg">
+                                <a href="https://powershellgallery.com" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">PowerShell Gallery</h4>
+                                </a>
+                            </li>
+                            <li data-lang="node" data-topic="pkg">
+                                <a href="https://npmjs.com" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">NPM</h4>
+                                </a>
+                            </li>
+                            <li data-lang="php" data-topic="webdev">
+                                <a href="https://www.w3schools.com/php/php_ref_overview.asp" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">W3: PHP</h4>
+                                </a>
+                            </li>
+                            <li data-lang="py" data-topic="pkg">
+                                <a href="https://pypi.org" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">PyPi</h4>
+                                </a>
+                            </li>
+                            <li data-lang="cli" data-topic="sys">
+                                <a href="https://docs.microsoft.com/en-us/powershell/scripting" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">PowerShell Docs</h4>
+                                </a>
+                            </li>
+                            <li data-lang="php" data-topic="pkg">
+                                <a href="https://packagist.org/" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">Composer</h4>
+                                </a>
+                            </li>
+                            <li data-lang="cli" data-topic="sys">
+                                <a href="https://www.mankier.com/" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">Bash man pages</h4>
+                                </a>
+                            </li>
+                            <li data-lang="cli" data-topic="sys">
+                                <a href="http://cht.sh" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">Cht.Sh</h4>
+                                </a>
+                            </li>
+                            <li data-lang="cli" data-topic="webdev">
+                                <a href="http://wttr.in" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">Wttr.In</h4>
+                                </a>
+                            </li>
+                            <li data-lang="py" data-topic="webdev">
+                                <a href="https://dash.plotly.com/" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">Plotly – Dash</h4>
+                                </a>
+                            </li>
+                            <li data-lang="cli" data-topic="webdev">
+                                <a href="https://extensionworkshop.com/documentation/develop/" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
+                                    <h4 class="uk-link-heading">WebExtensions</h4>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="uk-width-2-3@s uk-width-2-3@m">
-                <h3 class="uk-heading-line">References & Documentation</h3>
+            <div class="uk-section uk-section-default uk-section-small">
+                <div class="uk-container">
 
-                <div uk-filter="target: .js-filter">
-
-                    <div class="uk-grid-small uk-grid-divider" uk-grid>
-                        <div class="uk-width-1-2@m">
-                            <h5>Language</h5>
-                            <ul class="uk-subnav uk-subnav-pill" uk-margin>
-                                <li uk-filter-control="filter: [data-lang='cli']; group: data-lang"><a href="#">CLI</a></li>
-                                <li uk-filter-control="filter: [data-lang='css']; group: data-lang"><a href="#">CSS</a></li>
-                                <li uk-filter-control="filter: [data-lang='node']; group: data-lang"><a href="#">NodeJS</a></li>
-                                <li uk-filter-control="filter: [data-lang='php']; group: data-lang"><a href="#">PHP</a></li>
-                                <li uk-filter-control="filter: [data-lang='py']; group: data-lang"><a href="#">Python</a></li>
-                            </ul>
-                        </div>
-                        <div class="uk-width-1-2@m">
-                            <h5>Topic</h5>
-                            <ul class="uk-subnav uk-subnav-pill" uk-margin>
-                                <li uk-filter-control="filter: [data-topic='webdev']; group: topic"><a href="#">WebDev</a></li>
-                                <li uk-filter-control="filter: [data-topic='pkg']; group: topic"><a href="#">Packages</a></li>
-                                <li uk-filter-control="filter: [data-topic='sys']; group: topic"><a href="#">System</a></li>
-                            </ul>
-                        </div>
-                        <div class="uk-width-1-1@m">
-                            <ul class="uk-subnav uk-subnav-pill" uk-margin>
-                                <li class="uk-active" uk-filter-control><a href="#">All</a></li>
-                                <li class="uk-active uk-hidden" uk-filter-control="sort: data-lang"><a href="#">Sorted</a></li>
-                            </ul>
+                    <div class="uk-grid-large uk-flex-middle" uk-grid>
+                        <div class="uk-width-expand">
+                            <p class="uk-text-center uk-text-middle">Alex Munger — 2020</p>
                         </div>
                     </div>
 
-                    <ul id="refCards" class="js-filter uk-child-width-1-2 uk-child-width-1-3@m uk-text-center" uk-grid>
-                        <li data-lang="py" data-topic="sys">
-                            <a href="https://realpython.com" class="uk-card uk-card-default uk-card-body uk-card-hover uk-box-shadow-medium uk-box-shadow-hover-large">
-                                <h4 class="uk-link-heading">RealPython</h4>
-                            </a>
-                        </li>
-                        <li data-lang="php" data-topic="webdev">
-                            <a href="https://laracasts.com" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
-                                <h4 class="uk-link-heading">LaraCasts</h4>
-                            </a>
-                        </li>
-                        <li data-lang="css" data-topic="webdev">
-                            <a href="https://getuikit.com/docs" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
-                                <h4 class="uk-link-heading">UIKit</h4>
-                            </a>
-                        </li>
-                        <li data-lang="py" data-topic="webdev">
-                            <a href="https://flask.palletsprojects.com" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
-                                <h4 class="uk-link-heading">Flask</h4>
-                            </a>
-                        </li>
-                        <li data-lang="cli" data-topic="pkg">
-                            <a href="https://powershellgallery.com" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
-                                <h4 class="uk-link-heading">PS Gallery</h4>
-                            </a>
-                        </li>
-                        <li data-lang="node" data-topic="pkg">
-                            <a href="https://npmjs.com" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
-                                <h4 class="uk-link-heading">NPM</h4>
-                            </a>
-                        </li>
-                        <li data-lang="php" data-topic="webdev">
-                            <a href="https://www.w3schools.com/php/php_ref_overview.asp" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
-                                <h4 class="uk-link-heading">W3: PHP</h4>
-                            </a>
-                        </li>
-                        <li data-lang="py" data-topic="pkg">
-                            <a href="https://pypi.org" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
-                                <h4 class="uk-link-heading">PyPi</h4>
-                            </a>
-                        </li>
-                        <li data-lang="cli" data-topic="sys">
-                            <a href="https://docs.microsoft.com/en-us/powershell/scripting/community/2020-q2?view=powershell-7" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
-                                <h4 class="uk-link-heading">PS Docs</h4>
-                            </a>
-                        </li>
-                        <li data-lang="php" data-topic="pkg">
-                            <a href="https://packagist.org/" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
-                                <h4 class="uk-link-heading">Composer</h4>
-                            </a>
-                        </li>
-                        <li data-lang="cli" data-topic="sys">
-                            <a href="https://www.mankier.com/" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
-                                <h4 class="uk-link-heading">Bash man pages</h4>
-                            </a>
-                        </li>
-                        <li data-lang="cli" data-topic="sys">
-                            <a href="http://cht.sh" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
-                                <h4 class="uk-link-heading">Cht.Sh</h4>
-                            </a>
-                        </li>
-                        <li data-lang="cli" data-topic="webdev">
-                            <a href="http://wttr.in" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
-                                <h4 class="uk-link-heading">Wttr.In</h4>
-                            </a>
-                        </li>
-                        <li data-lang="py" data-topic="webdev">
-                            <a href="https://dash.plotly.com/" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
-                                <h4 class="uk-link-heading">Plotly – Dash</h4>
-                            </a>
-                        </li>
-                        <li data-lang="cli" data-topic="webdev">
-                            <a href="https://extensionworkshop.com/documentation/develop/" class="uk-card uk-card-default uk-card-body uk-box-shadow-medium uk-box-shadow-hover-large">
-                                <h4 class="uk-link-heading">WebExt</h4>
-                            </a>
-                        </li>
-                    </ul>
-
                 </div>
-
             </div>
 
         </div>
 
-        <div class="uk-section uk-section-default uk-section-small">
-            <div class="uk-container">
+        <script src="js/app.js"></script>
+        <script defer src="js/vendor/jquery.js"></script>
 
-                <div class="uk-grid-large uk-flex-middle" uk-grid>
-                    <div class="uk-width-expand">
-                        <p class="uk-text-center uk-text-middle">Alex Munger — 2020</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-
-    <script src="js/app.js"></script>
-    <script defer src="js/vendor/jquery.js"></script>
-
-</body>
+    </body>
 
 </html>

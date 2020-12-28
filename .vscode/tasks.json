@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "mix",
+			"problemMatcher": [],
+			"label": "npm: mix",
+			"detail": "node_modules/.bin/webpack --config=node_modules/laravel-mix/setup/webpack.config.js"
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "npm: build",
+			"detail": "cd src && web-ext build -a ../dist"
+		}
+	]
+}

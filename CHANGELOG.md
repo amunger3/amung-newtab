@@ -6,9 +6,17 @@ Changelog labels are any of the following:
 
 - [BUGFIX], [CHANGE], [CODEQUALITY], [DEPENDENCY], [ENHANCEMENT], [OTHER], [TRANSLATION]
 
+### Minor Release 0.3
+
+### Version 0.3.0 (2020-12-28)
+
+- [ENHANCEMENT] Added new links and updated link targets.
+- [ENHANCEMENT] Added toggler (still in development).
+- [DEPENDENCY] Upgraded many dependencies. See package.json for details.
+
 ### Version 0.2.1 (2020-11-09)
 
-- [DEPENDENCY] Upgraded many dependencies. See package.json diffs for details.
+- [DEPENDENCY] Upgraded many dependencies. See package.json for details.
 
 ### Minor Release 0.2
 
