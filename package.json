@@ -44,7 +44,7 @@
     },
     "scripts": {
         "build": "cd src && web-ext build -a ../dist",
-        "clean": "rmdir /S /Q .\\dist && rmdir /S /Q .\\docs",
+        "clean": "Remove-Item -Force -Recurse ./d*",
         "docs": "gulp docs",
         "lint": "npm-run-all lint:*",
         "lint:css": "gulp lint-css",
@@ -52,7 +52,8 @@
         "lint:webext": "cd src && web-ext lint",
         "mix": "node_modules/.bin/webpack --config=node_modules/laravel-mix/setup/webpack.config.js",
         "serve:dev": "cd src && web-ext run --firefox=\"C:/Users/toman/AppData/Local/Firefox Developer Edition/firefox.exe\"",
-        "msd": "npm run mix && npm run serve:dev"
+        "msd": "npm run mix && npm run serve:dev",
+        "build:all": "npm run clean && npm run docs && npm run build"
     },
     "webExt": {
         "run": {
