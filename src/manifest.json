@@ -21,7 +21,10 @@
     },
     "content-scripts": {
         "matches": ["<all_urls>"],
-        "js": ["js/content_scripts/switch.js"]
+        "js": [
+            "js/content_scripts/switch.js",
+            "js/content_scripts/theme.js"
+        ]
     },
     "chrome-settings-overrides": {},
     "chrome_url_overrides": {
