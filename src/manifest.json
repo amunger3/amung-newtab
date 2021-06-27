@@ -3,37 +3,45 @@
     "name": "__MSG_extension_name__",
     "description": "__MSG_extension_description__",
     "author": "Alex Munger",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "homepage_url": "https://github.com/amunger3/amung-newtab",
-    "icons": {
+    "icons":
+    {
         "48": "img/uicon.svg",
         "64": "img/uicon.svg",
         "96": "img/uicon.svg"
     },
-    "developer": {
+    "developer":
+    {
         "name": "Alex Munger",
         "url": "https://github.com/amunger3"
     },
-    "background": {
+    "background":
+    {
         "scripts": [
             "js/background.js"
         ]
     },
-    "content-scripts": {
+    "content-scripts":
+    {
         "matches": ["<all_urls>"],
         "js": [
             "js/content_scripts/switch.js",
             "js/content_scripts/theme.js"
         ]
     },
-    "chrome-settings-overrides": {},
-    "chrome_url_overrides": {
+    "chrome-settings-overrides":
+    {},
+    "chrome_url_overrides":
+    {
         "newtab": "amung.html"
     },
-    "browser_action": {
+    "browser_action":
+    {
         "browser_style": false,
         "default_area": "navbar",
-        "default_icon": {
+        "default_icon":
+        {
             "48": "img/uicon.svg",
             "64": "img/uicon.svg",
             "96": "img/uicon.svg"
@@ -41,22 +49,29 @@
         "default_popup": "options.html",
         "default_title": "__MSG_settings_title__"
     },
-    "commands": {
-        "_execute_browser_action": {
-            "suggested_key": {
+    "commands":
+    {
+        "_execute_browser_action":
+        {
+            "suggested_key":
+            {
                 "default": "Shift+F12"
             }
         }
     },
-    "omnibox": {
+    "omnibox":
+    {
         "keyword": "newtab-amung"
     },
-    "browser_specific_settings": {
-        "gecko": {
+    "browser_specific_settings":
+    {
+        "gecko":
+        {
             "id": "amung@leftparties.org"
         }
     },
-    "options_ui": {
+    "options_ui":
+    {
         "page": "options.html",
         "open-in-tab": true
     },

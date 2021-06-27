@@ -22,6 +22,15 @@
 - Build directory: `dist/`
 - Docs: `docs/`
 
+## Development
+
+- Regularly update npm dependencies:
+
+```powershell
+    PS> ncu -u
+    PS> npm install
+```
+
 ## References
 
 - [WebExt](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)

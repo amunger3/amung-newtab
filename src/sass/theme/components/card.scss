@@ -16,3 +16,5 @@ $card-default-background:             $Gy-F !default;
 $card-default-color:                  $Gy-G !default;
 $card-default-title-color:            $Gy-E !default;
 $card-default-hover-background:       darken($card-default-background, 5%) !default;
+$card-primary-background:             $global-primary-background !default;
+$card-primary-hover-background:       darken($card-primary-background, 5%) !default;

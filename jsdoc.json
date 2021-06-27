@@ -2,20 +2,25 @@
     "plugins": [
         "node_modules/jsdoc-strip-async-await"
     ],
-    "tags": {
+    "tags":
+    {
         "allowUnknownTags": true
     },
-    "opts": {
+    "opts":
+    {
         "destination": "./docs",
         "encoding": "utf8",
         "recurse": true
     },
-    "templates": {
+    "templates":
+    {
         "cleverLinks": true,
         "monospaceLinks": false,
-        "default": {
+        "default":
+        {
             "outputSourceFiles": true,
-            "staticFiles": {
+            "staticFiles":
+            {
                 "include": [
                     "./src/img"
                 ]
@@ -24,7 +29,7 @@
         "systemName": "AMung — NewTab",
         "path": "ink-docstrap",
         "theme": "superhero",
-        "footer": "Alex Munger — 2020",
+        "footer": "Alex Munger — 2021",
         "includeDate": true,
         "linenums": true,
         "outputSourceFiles": true,

@@ -1,7 +1,8 @@
 let mix = require('laravel-mix');
 
 
-mix.copyDirectory('node_modules/uikit/src/scss', 'src/sass/uikit')
+mix
+    .copyDirectory('node_modules/uikit/src/scss', 'src/sass/uikit')
     .copyDirectory('node_modules/uikit/src/js', 'src/js/uikit')
     .copy('node_modules/jquery/dist/jquery.js', 'src/js/vendor/')
     .sass('src/sass/app.scss', 'src/css')

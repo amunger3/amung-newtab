@@ -6,6 +6,13 @@ Changelog labels are any of the following:
 
 - [BUGFIX], [CHANGE], [CODEQUALITY], [DEPENDENCY], [ENHANCEMENT], [OTHER], [TRANSLATION]
 
+### Minor Release 0.4
+
+### Version 0.4.0 (2021-06-27)
+
+- [ENHANCEMENT] Added dark theme toggler.
+- [DEPENDENCY] Upgraded many dependencies. See package.json for details.
+
 ### Minor Release 0.3
 
 ### Version 0.3.0 (2020-12-28)

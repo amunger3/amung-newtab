@@ -1718,6 +1718,11 @@ button.uk-icon:not(:disabled) {
   vertical-align: top;
 }
 
+.uk-select[multiple],
+.uk-select[size] {
+  resize: vertical;
+}
+
 /* Focus */
 .uk-input:focus,
 .uk-select:focus,
@@ -2959,11 +2964,30 @@ select.uk-form-width-xsmall {
 
 /* Badge
  ========================================================================== */
+/*
+ * 1. Position
+ * 2. Size
+ * 3. Style
+ * 4. Center child vertically
+ */
 .uk-card-badge {
+  /* 1 */
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 15px;
+  right: 15px;
   z-index: 1;
+  /* 2 */
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* 3 */
+  background: #6554c0;
+  color: #fcfcfc;
+  font-size: 0.875rem;
+  /* 4 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*
@@ -4304,20 +4328,22 @@ select.uk-form-width-xsmall {
  ========================================================================== */
 /*
  * 1. Let items take content dimensions (0 0 auto)
- * 2. Create position context
- * 3. Disable horizontal panning gestures in IE11 and Edge
- * 4. Suppress outline on focus
+ *    `max-width` needed to keep image responsiveness and prevent content overflow
+ * 3. Create position context
+ * 4. Disable horizontal panning gestures in IE11 and Edge
+ * 5. Suppress outline on focus
  */
 .uk-slider-items > * {
   /* 1 */
   flex: none;
-  /* 2 */
-  position: relative;
+  max-width: 100%;
   /* 3 */
+  position: relative;
+  /* 4 */
   touch-action: pan-y;
 }
 
-/* 4 */
+/* 5 */
 .uk-slider-items > :focus {
   outline: none;
 }
@@ -4326,7 +4352,7 @@ select.uk-form-width-xsmall {
    Component: Sticky
  ========================================================================== */
 /*
- * 1. Resolve frame rate issues on devices with lower frame rates by forcing hardware acceleration
+ * 1. Force new layer to resolve frame rate issues on devices with lower frame rates
  */
 .uk-sticky-fixed {
   z-index: 980;
@@ -5439,7 +5465,7 @@ ul.uk-nav-sub {
 
 /* Divider
  ========================================================================== */
-.uk-nav-divider {
+.uk-nav > .uk-nav-divider {
   margin: 5px 0;
 }
 
@@ -5560,6 +5586,14 @@ ul.uk-nav-sub {
 /* Parent icon modifier  */
 .uk-nav-center.uk-nav-parent-icon > .uk-parent > a::after {
   position: absolute;
+}
+
+/* Style modifier
+ ========================================================================== */
+.uk-nav.uk-nav-divider > :not(.uk-nav-divider) + :not(.uk-nav-header, .uk-nav-divider) {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 1px solid #e5e5e5;
 }
 
 /* ========================================================================
@@ -8537,7 +8571,9 @@ iframe.uk-cover {
 /* Size
  ========================================================================== */
 .uk-background-cover,
-.uk-background-contain {
+.uk-background-contain,
+.uk-background-width-1-1,
+.uk-background-height-1-1 {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
@@ -8548,6 +8584,14 @@ iframe.uk-cover {
 
 .uk-background-contain {
   background-size: contain;
+}
+
+.uk-background-width-1-1 {
+  background-size: 100%;
+}
+
+.uk-background-height-1-1 {
+  background-size: auto 100%;
 }
 
 /* Position
@@ -8950,7 +8994,7 @@ iframe.uk-cover {
  * 2. Create position context
  * 3. Prevent content overflow
  * 4. Behave like most inline-block elements
- * 5. Force hardware acceleration without creating a new stacking context
+ * 5. Force new layer without creating a new stacking context
  *    to fix 1px glitch when combined with overlays and transitions in Webkit
  * 6. Clip child elements
  */
@@ -9087,34 +9131,32 @@ iframe.uk-cover {
 /*
  * 1. Set position.
  * 2. Set style
- * 3. Blur doesn't work on pseudo elements with negative `z-index` in Edge.
- *    Solved by using `before` and add position context to child elements.
+ * 3. Fix shadow being clipped in Safari if container is animated
  */
 @supports (filter: blur(0)) {
   .uk-box-shadow-bottom {
     display: inline-block;
     position: relative;
+    z-index: 0;
     max-width: 100%;
     vertical-align: middle;
   }
 
-  .uk-box-shadow-bottom::before {
+  .uk-box-shadow-bottom::after {
     content: "";
     /* 1 */
     position: absolute;
     bottom: -30px;
     left: 0;
     right: 0;
+    z-index: -1;
     /* 2 */
     height: 30px;
     border-radius: 100%;
     background: #444;
     filter: blur(20px);
-  }
-
-  /* 3 */
-  .uk-box-shadow-bottom > * {
-    position: relative;
+    /* 3 */
+    will-change: filter;
   }
 }
 /* Drop cap
@@ -10325,7 +10367,7 @@ iframe.uk-cover {
 }
 
 .uk-transition-scale-down {
-  transform: scale(1.1, 1.1);
+  transform: scale(1.03, 1.03);
 }
 
 /* Show */
@@ -10333,7 +10375,7 @@ iframe.uk-cover {
 .uk-transition-toggle:focus .uk-transition-scale-up,
 .uk-transition-active.uk-active .uk-transition-scale-up {
   opacity: 1;
-  transform: scale(1.1, 1.1);
+  transform: scale(1.03, 1.03);
 }
 
 .uk-transition-toggle:hover .uk-transition-scale-down,
@@ -10590,7 +10632,29 @@ iframe.uk-cover {
 .uk-card-secondary.uk-card-body .uk-link:hover,
 .uk-card-secondary > :not([class*=uk-card-media]) .uk-link:hover,
 .uk-overlay-primary .uk-link:hover,
-.uk-offcanvas-bar .uk-link:hover {
+.uk-offcanvas-bar .uk-link:hover,
+.uk-light .uk-link-toggle:hover .uk-link,
+.uk-section-primary:not(.uk-preserve-color) .uk-link-toggle:hover .uk-link,
+.uk-section-secondary:not(.uk-preserve-color) .uk-link-toggle:hover .uk-link,
+.uk-tile-primary:not(.uk-preserve-color) .uk-link-toggle:hover .uk-link,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-link-toggle:hover .uk-link,
+.uk-card-primary.uk-card-body .uk-link-toggle:hover .uk-link,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-link-toggle:hover .uk-link,
+.uk-card-secondary.uk-card-body .uk-link-toggle:hover .uk-link,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-link-toggle:hover .uk-link,
+.uk-overlay-primary .uk-link-toggle:hover .uk-link,
+.uk-offcanvas-bar .uk-link-toggle:hover .uk-link,
+.uk-light .uk-link-toggle:focus .uk-link,
+.uk-section-primary:not(.uk-preserve-color) .uk-link-toggle:focus .uk-link,
+.uk-section-secondary:not(.uk-preserve-color) .uk-link-toggle:focus .uk-link,
+.uk-tile-primary:not(.uk-preserve-color) .uk-link-toggle:focus .uk-link,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-link-toggle:focus .uk-link,
+.uk-card-primary.uk-card-body .uk-link-toggle:focus .uk-link,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-link-toggle:focus .uk-link,
+.uk-card-secondary.uk-card-body .uk-link-toggle:focus .uk-link,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-link-toggle:focus .uk-link,
+.uk-overlay-primary .uk-link-toggle:focus .uk-link,
+.uk-offcanvas-bar .uk-link-toggle:focus .uk-link {
   color: #fcfcfc;
 }
 .uk-light :not(pre) > code, .uk-section-primary:not(.uk-preserve-color) :not(pre) > code, .uk-section-secondary:not(.uk-preserve-color) :not(pre) > code, .uk-tile-primary:not(.uk-preserve-color) :not(pre) > code, .uk-tile-secondary:not(.uk-preserve-color) :not(pre) > code, .uk-card-primary.uk-card-body :not(pre) > code, .uk-card-primary > :not([class*=uk-card-media]) :not(pre) > code, .uk-card-secondary.uk-card-body :not(pre) > code, .uk-card-secondary > :not([class*=uk-card-media]) :not(pre) > code, .uk-overlay-primary :not(pre) > code, .uk-offcanvas-bar :not(pre) > code,
@@ -11495,6 +11559,9 @@ iframe.uk-cover {
 }
 .uk-light .uk-nav-primary .uk-nav-sub li.uk-active > a, .uk-section-primary:not(.uk-preserve-color) .uk-nav-primary .uk-nav-sub li.uk-active > a, .uk-section-secondary:not(.uk-preserve-color) .uk-nav-primary .uk-nav-sub li.uk-active > a, .uk-tile-primary:not(.uk-preserve-color) .uk-nav-primary .uk-nav-sub li.uk-active > a, .uk-tile-secondary:not(.uk-preserve-color) .uk-nav-primary .uk-nav-sub li.uk-active > a, .uk-card-primary.uk-card-body .uk-nav-primary .uk-nav-sub li.uk-active > a, .uk-card-primary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-sub li.uk-active > a, .uk-card-secondary.uk-card-body .uk-nav-primary .uk-nav-sub li.uk-active > a, .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-sub li.uk-active > a, .uk-overlay-primary .uk-nav-primary .uk-nav-sub li.uk-active > a, .uk-offcanvas-bar .uk-nav-primary .uk-nav-sub li.uk-active > a {
   color: #fcfcfc;
+}
+.uk-light .uk-nav.uk-nav-divider > :not(.uk-nav-divider) + :not(.uk-nav-header, .uk-nav-divider), .uk-section-primary:not(.uk-preserve-color) .uk-nav.uk-nav-divider > :not(.uk-nav-divider) + :not(.uk-nav-header, .uk-nav-divider), .uk-section-secondary:not(.uk-preserve-color) .uk-nav.uk-nav-divider > :not(.uk-nav-divider) + :not(.uk-nav-header, .uk-nav-divider), .uk-tile-primary:not(.uk-preserve-color) .uk-nav.uk-nav-divider > :not(.uk-nav-divider) + :not(.uk-nav-header, .uk-nav-divider), .uk-tile-secondary:not(.uk-preserve-color) .uk-nav.uk-nav-divider > :not(.uk-nav-divider) + :not(.uk-nav-header, .uk-nav-divider), .uk-card-primary.uk-card-body .uk-nav.uk-nav-divider > :not(.uk-nav-divider) + :not(.uk-nav-header, .uk-nav-divider), .uk-card-primary > :not([class*=uk-card-media]) .uk-nav.uk-nav-divider > :not(.uk-nav-divider) + :not(.uk-nav-header, .uk-nav-divider), .uk-card-secondary.uk-card-body .uk-nav.uk-nav-divider > :not(.uk-nav-divider) + :not(.uk-nav-header, .uk-nav-divider), .uk-card-secondary > :not([class*=uk-card-media]) .uk-nav.uk-nav-divider > :not(.uk-nav-divider) + :not(.uk-nav-header, .uk-nav-divider), .uk-overlay-primary .uk-nav.uk-nav-divider > :not(.uk-nav-divider) + :not(.uk-nav-header, .uk-nav-divider), .uk-offcanvas-bar .uk-nav.uk-nav-divider > :not(.uk-nav-divider) + :not(.uk-nav-header, .uk-nav-divider) {
+  border-top-color: rgba(252, 252, 252, 0.2);
 }
 .uk-light .uk-navbar-nav > li > a, .uk-section-primary:not(.uk-preserve-color) .uk-navbar-nav > li > a, .uk-section-secondary:not(.uk-preserve-color) .uk-navbar-nav > li > a, .uk-tile-primary:not(.uk-preserve-color) .uk-navbar-nav > li > a, .uk-tile-secondary:not(.uk-preserve-color) .uk-navbar-nav > li > a, .uk-card-primary.uk-card-body .uk-navbar-nav > li > a, .uk-card-primary > :not([class*=uk-card-media]) .uk-navbar-nav > li > a, .uk-card-secondary.uk-card-body .uk-navbar-nav > li > a, .uk-card-secondary > :not([class*=uk-card-media]) .uk-navbar-nav > li > a, .uk-overlay-primary .uk-navbar-nav > li > a, .uk-offcanvas-bar .uk-navbar-nav > li > a {
   color: rgba(252, 252, 252, 0.5);
